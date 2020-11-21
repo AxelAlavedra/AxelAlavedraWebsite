@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="../index.html">Axel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="../index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>  
+	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/projects/guild_master/mainmenu.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Guild Master</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">Guild Master</h2>
+            <p>Guild Master is a strategy fantasy game where the player takes control of a collective of heroes who are part of a brotherhood and has to manage them to beat the final dungeon.</p>
+            <p>The player needs to recruit members for the guild, whom will be able to produce different type of resources. These resources will be used as provisions to send the members to the Dungeon, on different kind of quests, giving them various benefits. Each quest type will favour a specific type of resource to improve it's chance of success.</p>
+            <p><img src="../images/projects/guild_master/hellopng.png" width="640" alt="" class="img-fluid"></p>
+            <p>These Dungeon quests will reward the player with special resources used to upgrade the guild buildings like the hall or blacksmith, allowing access to more members and improvements for them.
+              Each enemy which can be encountered on a quest is countered by a specific unity, so make sure to bring the perfect party for each quest. <br>The end goal is to defeat the boss of the dungeon before the day limit.</p>
+            <p><img src="../images/projects/guild_master/recruitment.gif" width="640" alt="" class="img-fluid"></p>
+            <p>
+              This game was made with only 2 students for the AI subject of the Bachelor's Degree in Video Game Design and Development at the UPC.
+            <br>Making this game was an amazing experience, since AI is one of my favorite things about videogames, and also this was the first game where I had full control of the Design, since my colleague didn't have much time due to other subject projects.</p>
+            <p>In this project, the programming was made by both members of the team, since it was a class project to develop AI, even though I focused a bit more on gameplay and my colleague on UI. This means that some parts of My Contribution weren't developed by myself alone.</p>
+            
+            <h2 class="mb-3">My Contribution</h2>
+            <h4 class="mb-3 mt-5">Player Interactions</h4>
+            <p>The player is able to:
+            <ul>
+              <li>Send agents to quest. You can do this by clicking the quest button (Scroll) selecting a mission in the table and assigning memebers by clicking them in the right side member panel. You can also bring provisions with them by clicking the icons in the provision panel.</li>
+              <li>Upgrade the guild house and the blacksmith building using the resources gathered by the quests. You can do this by clicking the blacksmith(anvil)/guild hall(banner) buttons and then clicking the green arrow.
+              </li>
+              <li>Recuit heroes to expand the guild. You can do this by opening the guild hall panel and selecting the member you want to recruit (if you have slots available)
+              </li>
+              <li>Make a member work or rest with the click of the state button in their portrait inside the member list panel.
+              </li>
+            </ul>   
+            </p>
+            <p><img src="../images/projects/guild_master/guildhall.png" width="640" alt="" class="img-fluid"></p>
+            
+            <h4 class="mb-3 mt-5">AI Archetypes</h4>
+            <p>Every agent follows the same Behaviour tree when resting and when they are in quest they do the same, but every agent has it's own FSM when working nested in their Behaviour tree making it behave in a different way.      
+            <br>When resting, the agents recover stamina.        
+            <br>While daylight agents have a 25% of going to 4 different places:</p>        
+            <ul>
+              <li><b>The market:</b> agent walks around the market and visits 4 diferent spots.</li>
+              <li><b>Fishing:</b> agent walks to the fishing spot, picks a fishing pole and starts fishing.</li>
+              <li><b>The tavern:</b> agent walks to the tavern and enters.</li>
+              <li><b>Walk:</b> agent goes for a walk and visit random spots in the map while chilling.</li>
+            </ul>
+            <p><img src="../images/projects/guild_master/fishing.jpg" width="640" alt="" class="img-fluid"></p>
+            <p>
+            During night time, an agent has a 55% chance of going to sleep and rest % is divided between the rest of the options above.
+            When in quest, the agent moves to the dungeon and enters in it, when the quest is complete they apear again and a resume.
+            </p>
+            
+            <h5 class="mb-3 mt-5">Knight</h5>     
+            <p>While working knights go to the warrior training area, pick up a weapon and try to find a couple, if they have no couple to fight with they fight solo. If someone is free he will fight him.</p>
+            <p><img src="../images/projects/guild_master/knights.gif" width="640" alt="" class="img-fluid"></p>
+            <h5 class="mb-3 mt-5">Mage</h5>     
+            <p>Mages go to the Alchemy tower while working, they create potions by going to a recipe shelf and selecting a recipe, then they go to a material shelf and pickup the materials needed, at last they go to the alchemy table and craft the potion and repeat.</p>
+            <p><img src="../images/projects/guild_master/mage.gif" width="640" alt="" class="img-fluid"></p>
+            <h5 class="mb-3 mt-5">Hunter</h5>     
+            <p>Hunters while working they gather meat, to do it, they go to the forest and wander for a prey, after they spot one, they kill it and moves towards it, then gather the meat and go again.</p>
+            <p><img src="../images/projects/guild_master/hunter.gif" width="640" alt="" class="img-fluid"></p>
+            
+            <h4 class="mb-3 mt-5">Quest System</h4>
+            <p>Quests are randomly generated every new day and have different resources as rewards depending on the difficulty and size of it. There’s one, three, five and ten men quests, also a Quest can be an Adventure or a Bounty. Bounties favor Flame resource as provision, Adventures favor meat.</p>
+            <p><img src="../images/projects/guild_master/quest_list.jpg" width="640" alt="" class="img-fluid"></p>
+            <p>Each quest has enemies assigned to them, which the group will require to counter to improve their chances of finishing the quest. Each member class counters a different enemy. Warriors counter skeletons. Mages counter orcs. Hunters counter bandits.</p>
+            <p><img src="../images/projects/guild_master/quest_counter_image.jpg" width="640" alt="" class="img-fluid"></p>
+            <p>The player can assign provisions to the quest to increase success chance and allow Members to heal stamina during it. At the end of a quest, each member with 0 stamina has a great chance of dying and be removed from the game completely.</p>
+            <h4 class="mb-3 mt-5">Game Progression</h4>
+            <p>
+              Each different unit of the game creates a specific resource. These specific resources are then used on the quests that the game generates for the player.
+              <br>After successfully completing a quest, the player will receive a new set of resource, and those will be used to upgrade the different buildings of the game, recruit new units and improve their level, allowing the player to progress to more difficult quests.
+            </p>
+            <p><img src="../images/projects/guild_master/upgrade.png" width="640" alt="" class="img-fluid"></p>
+            <h6 class="mb-3 mt-5">Resources</h6>     
+            <ul>
+              <li><b>Potion:</b> Potions allow a member to heal 50% stamina when it’s stamina drops below 25%. Obtainable from Mage work.</li>
+              <li><b>Meat:</b> Meat greatly increases the success chance of Adventure Quests. Obtainable from Hunter work.</li>
+              <li><b>Flame:</b> Flames greatly increase the success chance of Bounty Quests. Obtainable from Warrior work.</li>
+              <li><b>Gold:</b> Gold is used to upgrade Buildings and level up Members. Obtainable from Quests.</li>
+              <li><b>Shield:</b> Shields are used to upgrade the Blacksmith. Obtainable from Quests.</li>
+              <li><b>Crown:</b> Crowns are used to upgrade the Guild Hall. Obtainable from Quests.</li>
+            </ul>     
+            <p><img src="../images/projects/guild_master/resources.png" width="480" alt="" class="img-fluid"></p>   
+          </div> <!-- .col-md-8 -->
+          
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <br><br>
+            	<h3 class="heading-sidebar">Links</h3>
+              <ul class="categories">
+                <li><a href="https://marcgs96.github.io/Guild-Master/" target="_blank">Website<span></span></a></li>
+                <li><a href="https://github.com/Marcgs96/Guild-Master/releases/latest" target="_blank">Download<span></span></a></li>
+                <li><a href="https://github.com/Marcgs96/Guild-Master" target="_blank">Github<span></span></a></li>
+              </ul>
+              <br>
+              <h3 class="heading-sidebar">Other Projects</h3>
+              <ul class="categories">
+                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
+                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
+                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
+                <li><a href="bazzle.html">Bazzle<span></span></a></li>
+                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/AxelAlavedra" target="_blank"><span class="icon-github"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>
