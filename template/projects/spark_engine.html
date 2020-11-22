@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clark - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="../index.html">Axel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="../index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>  
+    <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/SparkEngine.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Spark Engine</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">Spark Engine</h2>
+            <p>Spark Engine is a 3D game engine developed by Marc Guillen and myself during the Game Development grade at CITM-UPC Terrassa for the subject "Game Engines". 
+              The entire development has been supervised by the lecturer Ricard Pillosu and all the code is written in C++ using OpenGL.</p>
+            <p>
+              <img src="../images/main/SparkEngine.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              The structure of the engine is based on different modules, each one responsible for a specific task to make the engine work as a whole. 
+              Everything was coded from scratch, some parts my teammate and I coded together and others we had to split to achieve the final goal.
+            </p>
+            <p>
+              This was one of the hardest projects of the Game Development grade, since we had a lot of work, not much time and a lot of content to learn. 
+              Overall, the experience was succesfull, since we learned a lot from making this engine and gained a lot of experience working with OpenGl.
+            </p>
+
+            <h2 class="mb-3 mt-5">My contribution</h2>
+            <p>To build an engine is an enormous task, and there were many different contributions to be done. Some of the ones I have done were:
+            </p>
+            <ul>
+              <li><b>Component info on Inspector</b>: This shows relevant information of each Component on the Inspector window, to debug and change the values on the fly.</li>
+              <li><b>Quadtree/Octree</b>: We developed a Quadtree and then an Octree for static GameObjects to optimize the frustum culling for the rendering.</li>
+              <p><img src="../images/projects/spark_engine/octree.JPG" alt="" width="348" class="img-fluid"></p>
+              <li><b>Render Scene to Texture</b>: This was a small but necessary task, rendering the current game scene into a texture to show on different windows</li>
+              <li><b>Scene window resizing with aspect ratio</b>: Made it so the Scene and Game windows were able to be resized and always keep the aspect ratio</li>
+              <li><b>Scene serialization. Load/Save scene with UI</b>: We can serialize the setup of a scene and save it in a binary file taking minimum space requirement, after that we can load that same file to recover the scene.</li>
+              <li><b>Save mesh, texture and models to own file format</b>: Same as the scene, but this time with meshes, textures and models on our Library, this way we could efficiently save and load these type of files without occupying a lot of disk space.</li>
+              <li><b>Module Resources (meta files, reference counting, etc)</b>: This was a huge task, the module to manage all the assets of our engine. The base of the module is making each asset have its own meta file which links the asset with the library file. With this meta, we made it so upon start, all resources not in library get imported, if they have meta file, it gets imported with meta file info.
+                <br>Also on start, all resources already in library get created from meta.
+                Resources in library not linked to any meta get deleted on startup.
+                On startup if meta file and resource file are not in same folder, it will move meta to resource folder and Reference counting to not load the same asset twice.</li>
+                <p><img src="../images/projects/spark_engine/resources.JPG" alt="" class="img-fluid"></p>
+              <li><b>Project window</b>: This window from the engine shows all the assets located in the current selected folder and allows to create new folderes, move assets between folders and delete the asset from the project.</li>
+              <p><img src="../images/projects/spark_engine/projectwindow.JPG" alt="" class="img-fluid"></p>
+              <li><b>Resource Import settings</b>: Following with the asset window, once an asset is selected, it will show it's import settings on the Inspector tab, allowing to change the way a mesh was imported or a texture settings.</li>
+              <p><img src="../images/projects/spark_engine/import.JPG" alt="" class="img-fluid"></p>
+              <li><b>Game Start/Pause and state recovery</b>: On start, the engine saves a temporary file with the scene serialized, this way when the user stops the game, the scene will be recovered to it's original state with that file. It allows allows to pause the execution of the game and change the speed at which it runs.</li>
+              <li><b>Time module</b>: This module manages the timescale of the engine, keeps track of the frame count, the time since engine startup and the time since game start.</li>
+              <li><b>Skinning</b>: Very simple skinning method, without shader, to deform the mesh with the current bones.</li>
+              <p><img src="../images/projects/witcher/skinning.gif" alt="" class="img-fluid"></p>
+              <li><b>Bones import and Skeleton attachment</b>: Importing bones from a model, saving them and then being able to link the root bone of the skeleton to it's gameobject in the scene for the future skinning.</li>
+              <li><b>Animation import</b>: Import animation files with each different type of key(position/rotation/scale) of each bone and saving it into binary file.</li>
+              <li><b>Animation clips</b>: Made it so from an animation file, we can cut it into different clips marking the initial frame and the end frame, to have each clip separated for proper use.</li>
+              <p><img src="../images/projects/spark_engine/clips.gif" alt="" class="img-fluid"></p>
+              <li><b>Animator Controller file - Import/Save/Load</b>: Converted the animator controller(file which contains animation states and transitions) into binary file which then can be imported to another project, saved, and loaded</li>
+            </ul>
+          </div> <!-- .col-md-8 -->
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <br><br>
+            	<h3 class="heading-sidebar">Links</h3>
+              <ul class="categories">
+                <li><a href="https://proboxam.github.io/SparkEngine/" target="_blank">Website<span></span></a></li>
+                <li><a href="https://github.com/ProboxAM/SparkEngine/releases/latest" target="_blank">Download<span></span></a></li>
+                <li><a href="https://github.com/ProboxAM/SparkEngine" target="_blank">Github<span></span></a></li>
+              </ul>
+              <br>
+              <h3 class="heading-sidebar">Other Projects</h3>
+              <ul class="categories">
+                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
+                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
+                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
+                <li><a href="bazzle.html">Bazzle<span></span></a></li>
+                <li><a href="guild_master.html">Guild Master<span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+			<div class="col-md-12 text-center">
+				<ul class="ftco-footer-social list-unstyled float-md float-lft mt-5">
+					<li class="ftco-animate"><a href="https://linkedin.com/in/axel-alavedra-cabello-113666121/"target="_blank"><span class="icon-linkedin"></span></a></li>
+					<li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
+					<li class="ftco-animate"><a href="https://github.com/AxelAlavedra"target="_blank"><span class="icon-github"></span></a></li>
+				</ul>
+		  	</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>
