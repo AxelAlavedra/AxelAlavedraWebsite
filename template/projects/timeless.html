@@ -43,12 +43,12 @@
 	      </div>
 	    </div>
     </nav>  
-    <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/SparkEngine.png');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/TW.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread">Spark Engine</h1>
+            <h1 class="mb-3 bread">Timeless Warriors</h1>
           </div>
         </div>
       </div>
@@ -58,51 +58,35 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 ftco-animate">
-            <h2 class="mb-3">Spark Engine</h2>
-            <p>Spark Engine is a 3D game engine developed by Marc Guillen and myself during the Game Development grade at CITM-UPC Terrassa for the subject "Game Engines". 
-              The entire development has been supervised by the lecturer Ricard Pillosu and all the code is written in C++ using OpenGL.</p>
-            <p>
-              <img src="../images/main/SparkEngine.png" alt="" class="img-fluid">
+            <h2 class="mb-3">Timeless Warriors</h2>
+            <p>Timeless Warriors is a 2D fighting game, greatly inspired by Super Smash Bros. Melee. The game features a total of 4 unique characters, each one with it's own moveset making it feel special.
+              The objective of the game is to knock your opponenets away from the stage with your attacks and the different kinds of gadgets that appear during the brawl.
             </p>
             <p>
-              The structure of the engine is based on different modules, each one responsible for a specific task to make the engine work as a whole. 
-              Everything was coded from scratch, some parts my teammate and I coded together and others we had to split to achieve the final goal.
+              <img src="../images/main/TW.png" alt="" class="img-fluid">
             </p>
             <p>
-              This was one of the hardest projects of the Game Development grade, since we had a lot of work, not much time and a lot of content to learn. 
-              Overall, the experience was succesfull, since we learned a lot from making this engine and gained a lot of experience working with OpenGl.
+              This game was developed by a group of 4 during the second year of Higher Education in Computer Games and Programming Skills. I mostly focused on programming the gameplay, but I also helped with Design and some Animations for the characters.          
+              <p>Working on Timeless Warriors was an amazing experience, since it was the first fully fleshed game I developed on Unity, before it was all small class projects. 
+              I feel like my skills as a gameplay programmer improved a lot thanks to this project, and it's where my love for programming games really started.</p>
             </p>
 
             <h2 class="mb-3 mt-5">My contribution</h2>
-            <p>To build an engine is an enormous task, and there were many different contributions to be done. Some of the ones I have done were:
+            <p>
+              As I mentioned before, I was focused an programming the gameplay of the game. I started by working on our Entity structure, making it so we could easily have bots and different kinds of character.
+              <br>After laying out the base structure, I developed the movement of the characters, all based on Stats which could inffluence the way our character plays like movement speed, number of jumps, falling speed, etc.
             </p>
-            <ul>
-              <li><b>Component info on Inspector</b>: This shows relevant information of each Component on the Inspector window, to debug and change the values on the fly.</li>
-              <li><b>Quadtree/Octree</b>: We developed a Quadtree and then an Octree for static GameObjects to optimize the frustum culling for the rendering.</li>
-              <p><img src="../images/projects/spark_engine/octree.JPG" alt="" width="348" class="img-fluid"></p>
-              <li><b>Render Scene to Texture</b>: This was a small but necessary task, rendering the current game scene into a texture to show on different windows</li>
-              <li><b>Scene window resizing with aspect ratio</b>: Made it so the Scene and Game windows were able to be resized and always keep the aspect ratio</li>
-              <li><b>Scene serialization. Load/Save scene with UI</b>: We can serialize the setup of a scene and save it in a binary file taking minimum space requirement, after that we can load that same file to recover the scene.</li>
-              <li><b>Save mesh, texture and models to own file format</b>: Same as the scene, but this time with meshes, textures and models on our Library, this way we could efficiently save and load these type of files without occupying a lot of disk space.</li>
-              <li><b>Module Resources (meta files, reference counting, etc)</b>: This was a huge task, the module to manage all the assets of our engine. The base of the module is making each asset have its own meta file which links the asset with the library file. With this meta, we made it so upon start, all resources not in library get imported, if they have meta file, it gets imported with meta file info.
-                <br>Also on start, all resources already in library get created from meta.
-                Resources in library not linked to any meta get deleted on startup.
-                On startup if meta file and resource file are not in same folder, it will move meta to resource folder and Reference counting to not load the same asset twice.</li>
-                <p><img src="../images/projects/spark_engine/resources.JPG" alt="" class="img-fluid"></p>
-              <li><b>Project window</b>: This window from the engine shows all the assets located in the current selected folder and allows to create new folderes, move assets between folders and delete the asset from the project.</li>
-              <p><img src="../images/projects/spark_engine/projectwindow.JPG" alt="" class="img-fluid"></p>
-              <li><b>Resource Import settings</b>: Following with the asset window, once an asset is selected, it will show it's import settings on the Inspector tab, allowing to change the way a mesh was imported or a texture settings.</li>
-              <p><img src="../images/projects/spark_engine/import.JPG" alt="" class="img-fluid"></p>
-              <li><b>Game Start/Pause and state recovery</b>: On start, the engine saves a temporary file with the scene serialized, this way when the user stops the game, the scene will be recovered to it's original state with that file. It allows allows to pause the execution of the game and change the speed at which it runs.</li>
-              <li><b>Time module</b>: This module manages the timescale of the engine, keeps track of the frame count, the time since engine startup and the time since game start.</li>
-              <li><b>Skinning</b>: Very simple skinning method, without shader, to deform the mesh with the current bones.</li>
-              <p><img src="../images/projects/witcher/skinning.gif" alt="" class="img-fluid"></p>
-              <li><b>Bones import and Skeleton attachment</b>: Importing bones from a model, saving them and then being able to link the root bone of the skeleton to it's gameobject in the scene for the future skinning.</li>
-              <li><b>Animation import</b>: Import animation files with each different type of key(position/rotation/scale) of each bone and saving it into binary file.</li>
-              <li><b>Animation clips</b>: Made it so from an animation file, we can cut it into different clips marking the initial frame and the end frame, to have each clip separated for proper use.</li>
-              <p><img src="../images/projects/spark_engine/clips.gif" alt="" class="img-fluid"></p>
-              <li><b>Animator Controller file - Import/Save/Load</b>: Converted the animator controller(file which contains animation states and transitions) into binary file which then can be imported to another project, saved, and loaded</li>
-            </ul>
+            <p>
+              When the basic movement was finished, I started working on the combat mechanics, laying out the base structure of our Attacks.
+              Each character could have 4 light attacks, 3 heavy attacks and 1 ultimate move, so it was very important to be able to easily create new kinds of attacks for each character with our structure.
+              <br>When the structure was set, I worked on how each attack would interact with the entity it hit, since each attack could have a different force value and direction for the knockback and of course, damage, it would apply.
+            </p>
+            <p>
+              When the attacks were finished, I implemented the dash and parry mechanics to help with the defensive gameplay and also the energy system for the ultimate move. 
+              <br>After all the base was developed for one character, I continued implementing each individual character with its own attacks and special mechanics.
+              Each character had it's own special mechanic, for example, Kara the Valkyrie could jump three times and had slow fall or the Dark Knight, who could drop a shadow clone on the battlefield which would copy his basic attacks and allowed the player to teleport to it at any time.
+            </p>
+
           </div> <!-- .col-md-8 -->
 
           <div class="col-lg-4 sidebar ftco-animate">
@@ -118,10 +102,10 @@
               <h3 class="heading-sidebar">Other Projects</h3>
               <ul class="categories">
                 <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
                 <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
                 <li><a href="bazzle.html">Bazzle<span></span></a></li>
                 <li><a href="guild_master.html">Guild Master<span></span></a></li>
+                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
               </ul>
             </div>
           </div>
