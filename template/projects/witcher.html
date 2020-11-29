@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +14,9 @@
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
 
     <link rel="stylesheet" href="../css/aos.css">
 
@@ -43,18 +47,18 @@
 	      </div>
 	    </div>
     </nav>  
-    <div class='vid'>
-      <video autoplay muted loop>
-        <source src="../videos/WBT_trailer.mp4" type="video/mp4">
-        </video>
-      </div>
-    <section class="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">
+
+    <section class="hero-wrap js-fullheight" style="background-image: url('../images/projects/witcher/logo.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        
-
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread"></h1>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <section class="ftco-section">
       <div class="container">
@@ -62,115 +66,111 @@
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">The Witcher: A Bard's Tale</h2>
             <p>The Witcher: A Bard's Tale is a Beat 'em up and Hack and Slash cooperative adventure game, where the players
-              take the role of Geralt the Rivia and Yennefer of Vengerberg, on their quest to rescue Ciri.<br>
-              Each character has its own set of combos and spells, making each one have a unique playstyle. Also, the players can find relics during the game, which will improve existing combos with new powerful abilities like burn or stun!
-              <br>The game features two unique bosses, over 5 different kinds of enemies, each one with a different behaviour and three different maps to fight in</p>
-            <p>
-              <img src="../images/projects/witcher/logo.png" alt="" class="img-fluid">
-            </p>
+              take the role of Geralt the Rivia and Yennefer of Vengerberg, on their quest to rescue Ciri.</p>
             <p>This game was made with my college class for the subject "Project 3" of the Bachelor's Degree in Video Game Design and Development at the UPC. The team was made of 37 students of the 3rd year of university.
-              <br>I've worked on many projects before this, but this was the first time with such a big team. Coordination was hard and we had very tight deliveries, but overall the game came out amazing and I am really proud of the work we all did.
-              <br>Also, a very important note, this game was all made with a Game Engine made by us, the students.
-            </p>
+            <p>I've worked on many projects before this, but this was the first time with such a big team. Coordination was hard and we had very tight deliveries, but overall the game came out amazing and I am really proud of the work we all did.
+            <p>Also, a very important note, this game was all made with a Game Engine made by us, the students.</p>
+            <video class="img-fluid" muted controls>
+              <source src="../videos/WBT_trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
 
             <h2 class="mb-3 mt-5">My contribution</h2>
-            <p>At the start of the project, I worked on the Animation Module of our Engine, but quickly moved to Gameplay programming, focusing on the Characters, since it's my favorite thing to program in a videogame.
-              I believe that I've gained a great amount of experience programming and also working in a big team thanks to this project.
+            <p>At the start of the project, I worked on the Animation Module of our Engine, but quickly moved to Gameplay programming, focusing on the Characters.
+            <p id="animation-section">I believe that I've gained a great amount of experience programming and also working in a big team thanks to this project.
             </p>
 
-            <h4 class="mb-3 mt-5">Engine</h4>
-            <p>In relation with the Engine we used worked, I worked with a colleague named Marc to implement the Animation Module. In this module I worked on the following features:
-              <ul>
-                <li><b>Importer:</b> I worked on importing the animations and rigs, creating the resource and meta files and saving it in Binary on the Library of the Engine.</li>
-                <li><b>DeformableMesh:</b> A component which has assigned a root bone and links the whole skeleton with the meshes it has to affect for the skinning.</li>
-                <li><b>Animation Clips:</b> Made a simple clip cutter so we can split an imported animation file into multiple clips to use each on its own.</li>
-              </ul>
-              <img src="../images/projects/witcher/skinning.gif" width="486"alt="" class="img-fluid"></p>
-            <p>I've also worked with another colleague, Alex Morales, to implement what we called Anim Tween. A simple module which allows different types of transformations of a GameObject such as color, size, position in a set period of time. All of these can have a different type of curves to obtain the exact effect required.</p>
-            <p><img src="../images/projects/witcher/ColorGif.gif" width="486"alt="" class="img-fluid"></p>
-            <img src="../images/projects/witcher/MoveGif.gif" width="486"alt="" class="img-fluid">
+            <h5 class="mb-3 mt-5">Animation Module</h5>
+            <p>I was responsible for the creation of the Animation Module of the Engine we used for this project with a colleague. My contributions were about importing and saving animation files, deforming the mesh and creating clips out of an animation file for separated use.</p>
+            <p class="text-center"><img src="../images/projects/witcher/skinning.gif" width="486" alt="" class="img-fluid" id="char-mov-section"></p>
+            </p>
 
-            <h4 class="mb-3 mt-5">Gameplay</h4>
-            <h5>Character State Machine</h5>
-            <p>At the start of the project, a simple State Machine based on a enum was developed for the character, but we quickly realized that it had bad scalability and would make us repeat code.           
-            To fix these problems, I changed from Enum State Machine to a Hierarchical State Machine, which encapsulated the different states of the characters effectively and helped us scale the functionalities of each state.</p>
-            
-            <h5>Character Movement</h5>
-            <p>After working on the Hierarchical State Machine rework, I started improving the character movement that was done before. I added acceleration and slow to the dodge, and had to rework most of the basic movement since during the development of the project, the Physics Module was changed and I had to redo the movement.
-            <p><img src="../images/projects/witcher/dodge.gif" width="486" alt="" class="img-fluid"></p>
-            Also, there was a problem with the movement when going down a slope, since it was made accelerating forward, it would go in the air, fall down, move forward, go into the air again, fall down over and over when going down a slope. I had to make a Raycast from the feet of the player to detect the surface the character was on and then calculate the slope of it to adapt the movement on that direction.</p>  
-            <p><img src="../images/projects/witcher/slope.gif" width="486" alt="" class="img-fluid"></p>
-            <p>In relation with the movement, I also implemented a set of sphere collider inside the feet of the character which triggers a footstep sound every time it collider with a ground surface, taking in count the material its made of(stone, sand, wood, etc).</p>
+            <h5 class="mb-3 mt-5">Character Movement</h5>
+            <p>For this project I developed the movement of the character. This was done with a Hierarchical State Machine, to allow us better scalability in the future and movement by forces.</p>
+            <p>I also had to face some problems with movement on slopes, since the character was moving always forward it would think that it was on the air when walking down the slope. To fix that I made the movement vector adapt to the current slope the character was standing in.</p>
+            <p>I also implemented a way for the character feet to detect what surface it was walking on to play a footstep sound taking in count the material it's made of(stone, sand, wood, etc).</p>
+            <p class="text-center"><img src="../images/projects/witcher/slope.gif" width="486" alt="" class="img-fluid" id="char-combat-section"></p>
 
 
             <h5 class="mb-3 mt-">Character Combat</h5>
-            <p>I worked on programming all the inputs and actions the character can do in combat, and all the different features that affect the attacks.
-            The combat is based on two differnt types of attacks, Spells and Combo Attacks, both share some small features but work on a different way.</p>
-
-            <h5>Combos</h5>
-            <p>To create the combos of the characters, I based the structure on a simple State Machine of Attacks. Each Attack would be a node with its own information of damage and effects, and also would point to the other Attacks it can link to.       
-            With this structure we easily created new Attacks and made them link to each other with the input we wanted to.</p>
-            <p><img src="../images/projects/witcher/combo.gif" width="486" alt="" class="img-fluid"></p>
-
-            <h5>Spells</h5>
-            <p>For the structure of the Spells, I wanted to creatd something that could have good scalability and also potential to generate a great diversity of spells.      
-            I created a system based on Tags, on which a spell can have a different amount of tags making it behave in a way or another.</p>
-            <ul>
-              <li><b>AOE:</b> this tag makes the spell hit with a marked area of effect.</li>
-              <li><b>Chaining:</b> this tag makes the spell chain to nerby enemies of the first enemy hit.</li>
-              <li><b>Buff:</b> this tag makes the spell apply an effect to the allies it hit.</li>
-              <li><b>Debuff:</b> this tag makes the spell apply a debuff/negative effect to the enemies it hits.</li>
-              <li><b>Trap:</b> this converts the spell into a trap, making it be an area on the ground on which the enemy has to enter to receive the hit/effect of the spell</li>
-              <li><b>Projectile:</b> this converts the spell into a projectile</li>
-            </ul>
-            <p>With these structure I was able to create all the spells of each character efficiently and allowed the designers to tweak them easily.</p>
-            <p><img src="../images/projects/witcher/nova.gif" width="486" alt="" class="img-fluid"></p>
-
-            <h5>Small Features</h5>
-            <p>I worked on different small features for all the attacks to improve the feel and flow of the combat.      
-            <ul>
-              <li><b>Interruption and Timing:</b> all attacks can be interrupted with a jump or dodge before and after the collider of the attack has been activated.</li>
-              <li><b>Snapping:</b> we can set an attack to have a snapping distance, which works as an auto-aim of the attack, to help the player attack the enemy they desire.</li>
-              <li><b>Impulse:</b> an attack can have a set impulse, to improve the feeling of a powerful attack, making the character move with it.</li>
-              <li><b>Hit Freeze:</b> this makes the player and the enemy freeze for a set amount of time when a hit connect, improving the feeling of the attack.</li>
-              <li><b>KnockBack:</b> we can set a knockback direction and force to each attack, so we can have attacks that knock enemies on the air, back or even pull them towards the character.</li>
-              <li><b>Collider Sleection and Update:</b> allows the selection of differnt types of colliders like a sphere, box or a collider which moves with the weapon of the character and make them change during the attack.</li>
-              <li><b>Impact Sound:</b> each attack can impact a surface and it will trigger an impact sound depending on the type of surface(sand, mud, stone).</li>
-            </ul>
+            <p>I worked on programming all the inputs and actions the character can do in combat, and all the different features related to the attacks.</p>
+            <p>Created a combo structure which can chain different attacks based on a simple State Machine on whic each attack is a different node connecting to the other possible attacks of the chain.</p>
+            <p>Also made a Spell system based on Tags, which allows to create different kinds of spells through JSON by adding tags, which will affect the way that spell behaves in the game</p>
+            <p>I worked on different small features for all the attacks to improve the feel and flow of the combat like combo interruption and timing, snapping(move and aim) to the enemy target, attack impulse which makes the character move forward based on force, 
+              hit freeze, enemy knockback, enemy decapitation, and also impact sound related to surface material it was hit.</p>
+            <div class="slider" id="yenn-section">
+              <div class="slide"><img src="../images/projects/witcher/decap.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/combo.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/igni.gif" height="440" width="720"></div>
+              <div class="slide"><img src="../images/projects/witcher/fthrower.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/aard.gif" height="440" width="720"></div>
+              <div class="slide"><img src="../images/projects/witcher/nova.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/yrden.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/earthproj.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/quen.gif" height="440" width="720"></div>
+              <div class="slide"><img src="../images/projects/witcher/chain.gif"height="440"></div>
+            </div>            
             <h5>Yennefer</h5>
-            <p>This character requires it's own section in this page because I wokred designing the character combos with my colleague Alejandro Paris and personally implemented all of her attacks, spells and dodge. 
-            The idea was to have two long range combos with low damage and two close range combos with higher damage. 
-            <p><img src="../images/projects/witcher/yenn_combo2.gif" width="486" alt="" class="img-fluid"></p>
+            <p>I worked designing the character combos with my colleague Alejandro Paris and personally implemented all of her attacks, spells and dodge. 
+            The idea was to have two long range combos with low damage and two close range combos with higher damage.</p>
             With these sets of combos, we thought that would be a good idea to move the enemy so we could flow between those. So we made one of the long range combos pull the enemy towards Yennefer and one of the close range combos to knock the enemy away.</p>
-            <p><img src="../images/projects/witcher/yenn_combo1.gif" width="486" alt="" class="img-fluid"></p>
-            <p>Im super proud of the results from this character, and I believe playing Yennefer is the most fun in this game. Not biased at all... :)</p>
-
+            
+            <div class="slider" id="relics-section">
+              <div class="slide"><img src="../images/projects/witcher/yenn_combo1.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/yenn_combo2.gif" height="440"></div>
+              <div class="slide"><img src="../images/projects/witcher/dodge.gif" height="440"></div>
+            </div>        
+            
+            
             <h5>Relics</h5>
-            <p>I worked on the structure of the Relic System with another colleague, Cere, setting the base of how it would interact with the Character, the Stats of the player and the effects they would apply, depending on the type of Relic that was picked up.     
-            <br>We based the structure on Relic Types and Relic Effects, the type indicates if it's going to work on a Dash or an Attack, and then the effect will determine if it's going to be fire(apply burn), ice(apply slow), etc.
-            </p>
+            <p>I worked on the structure of the Relic System, it was based on Relic Types and Relic Effects, the type indicates if it's going to work on a Dash or an Attack, and then the effect will determine if it's going to be fire(apply burn), ice(apply slow), etc. All of this could be configured through JSON file.</p>
             
             <h5>Effects and Stats</h5>
-            <p>The Effects System was designed with scalability in mind, so we could create any type of positive and negative effects, as desired by the Game Designers. To achieve this I created a base Effect class with the ability to modify Stats and have different callbacks based on Event     
-            <br>With the base class created I started working on Timed Effects, with which we can apply positive or negative effects to a Stat during a set amount of time or make it work with ticks, so every x amount of time it will affect the stats. 
-            <br>Thanks to this structure I was able to create Effects like a Burn, Slow, Shield, Speed Boost, etc.</p>
-            
-            <h5>Enemies</h5>
-            <p>For the enemies of this project I implemented the following features related to the combat:</p>
-            
-            <ul>
-              <li><b>Decaptations:</b> the character can decapitate an enemy when they kill it with a spell or the final attack of a combo string.</li>
-              <li><b>Dizzy:</b> this is a state the enemy enters when it dies and the enemy stops attacking. The enemy will stumble for a second before actually dying, this allows the player to continue attacking even if it's dead to achieve a decapitation.</li>
-            </ul>
-            <p><img src="../images/projects/witcher/decap.gif" width="486" alt="" class="img-fluid"></p>
+            <p>The Effects System was designed with scalability in mind, so we could create any type of positive and negative effects, as desired by the Game Designers. To achieve this I created a base Effect class with the ability to modify Stats and have different callbacks based on Events</p>     
+            <p id="utilities-section">With this base class I was able to create timed and permanent, positive or negative effects like Burn, Speed Boost or Shielding with ease through JSON file.</p>
+
             <h5>Utilities</h5>
-            <p>During the development of the project, the team felt like we needed different types of utility structures so I developed some of them:
+            <p>During the development of the project, the team felt like we needed different types of utility structures so I developed some of them like:
             <ul>
-            <li><b>Game Manager:</b> The Game Manager worked as a way to centralize the structure of the game, having different kinds of managers inside like a Enemy Manager, Player Manager, etc. With the Game Manager we could easily access all of these.</li>
-            <li><b>Particle Pooler:</b> As the performance of the game started to take hits with instantiations, I developed a simple particle pooler which focused on reutilizing the particles and projectiles we would use during the exectuion of the game. Instead of deleting them, we can just disable the unused particles and save them untill another Script requires that kind of particle.</li>
-            <li><b>Effect Factory:</b> To simplify the use of effects in the game, I created a Factory which we could ask a type of Effect that was needed and it would create a copy of it. All these effects were also previously create in a JSON file, so the Game Designer could also create new effects and update existing ones easily.</li>
-          </ul>
-          </p>
+            <li><b>Game Manager:</b> The Game Manager worked as a way to centralize the structure of the game and ease the access to different parts of the game in the code.</li>
+            <li><b>Particle Pooler:</b> As the performance of the game started to take hits with instantiations, I developed a simple particle pooler which focused on reutilizing the particles and projectiles we would use during the exectuion of the game. Instead of deleting them, we can just disable the unused particles and save it for a later use.</li>
+            </ul>
+            </p>
+
+            <h5 class="mb-3 mt-5">Anim Tween</h5>
+            <p>This was a simple module created with another colleague. It allows different types of transformations of a GameObject such as color, size, position in a set period of time. All of these can have a different type of animation curve to obtain the exact effect required.</p>
+            <div class="slider">
+              <div class="slide"><img src="../images/projects/witcher/ColorGif.gif"></div>
+              <div class="slide"><img src="../images/projects/witcher/MoveGif.gif"></div>
+            </div> 
+
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-1">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/bazzle.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Bazzle</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/timeless.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>Timeless Warriors</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
           </div> <!-- .col-md-8 -->
 
           <div class="col-lg-4 sidebar ftco-animate">
@@ -183,20 +183,21 @@
                 <li><a href="https://github.com/OverPowered-Team/TheWitcher/tree/dev" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
-              <h3 class="heading-sidebar">Other Projects</h3>
+              <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
-                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
-                <li><a href="bazzle.html">Bazzle<span></span></a></li>
-                <li><a href="guild_master.html">Guild Master<span></span></a></li>
-                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
+                <li><a href="#animation-section">Animation Module<span></span></a></li>
+                <li><a href="#char-mov-section">Character Movement<span></span></a></li>
+                <li><a href="#char-combat-section">Character Combat<span></span></a></li>
+                <li><a href="#yenn-section">Yennefer<span></span></a></li>
+                <li><a href="#relics-section">Relics & Effects/Stats<span></span></a></li>
+                <li><a href="#utilities-section">Utilities<span></span></a></li>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </section> <!-- .section -->
+    
 		
 
     <footer class="ftco-footer ftco-section">
@@ -234,6 +235,7 @@
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/jquery.stellar.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
   <script src="../js/jquery.magnific-popup.min.js"></script>
   <script src="../js/aos.js"></script>
   <script src="../js/jquery.animateNumber.min.js"></script>

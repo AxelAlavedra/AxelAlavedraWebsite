@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
 
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="../css/aos.css">
 
     <link rel="stylesheet" href="../css/ionicons.min.css">
@@ -60,79 +63,92 @@
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">Guild Master</h2>
             <p>Guild Master is a strategy fantasy game where the player takes control of a collective of heroes who are part of a brotherhood and has to manage them to beat the final dungeon.</p>
-            <p>The player needs to recruit members for the guild, whom will be able to produce different type of resources. These resources will be used as provisions to send the members to the Dungeon, on different kind of quests, giving them various benefits. Each quest type will favour a specific type of resource to improve it's chance of success.</p>
-            <p><img src="../images/projects/guild_master/hellopng.png" width="640" alt="" class="img-fluid"></p>
-            <p>These Dungeon quests will reward the player with special resources used to upgrade the guild buildings like the hall or blacksmith, allowing access to more members and improvements for them.
-              Each enemy which can be encountered on a quest is countered by a specific unity, so make sure to bring the perfect party for each quest. <br>The end goal is to defeat the boss of the dungeon before the day limit.</p>
-            <p><img src="../images/projects/guild_master/recruitment.gif" width="640" alt="" class="img-fluid"></p>
-            <p>
-              This game was made with only 2 students for the AI subject of the Bachelor's Degree in Video Game Design and Development at the UPC.
-            <br>Making this game was an amazing experience, since AI is one of my favorite things about videogames, and also this was the first game where I had full control of the Design, since my colleague didn't have much time due to other subject projects.</p>
-            <p>In this project, the programming was made by both members of the team, since it was a class project to develop AI, even though I focused a bit more on gameplay and my colleague on UI. This means that some parts of My Contribution weren't developed by myself alone.</p>
+            <p>The player needs to recruit members for the guild, whom will be able to produce different type of resources. These resources will be used as provisions to send the members to the Dungeon, 
+              on different kind of quests. From this dungeon quests the players obtains new rewards to upgrade the town and progress even deeper in the dungeon.</p>
+            <p class="text-center"><img src="../images/projects/guild_master/hellopng.png" alt="" class="img-fluid"></p>
+
+            <h2 class="mb-3" id="ai-section">My Contribution</h2>      
+            <h5 class="mb-3 mt-5">AI Archetypes</h5>
+            <p>Implemented a Behaviour Tree for the AI of each agent, which is divided into 3 main sections, Resting, Working and Questing.
+            When resting an agent regenerates stamina and chooses to do a random activity from a pool(shop, fish, go to the tavern, take a stroll).
+            Also during night time they can go to sleep.</p>
+
+            <p>Also, each agent has a specific behaviour while working depending on it's class. Knights train and fight in the arena, Mages create healing potions and Hunters go to the woods and hunt for meat.</p>
+
+            <div class="slider" id="quest-section">
+              <div class="slide"><img src="../images/projects/guild_master/fishing.jpg" height="430"></div>
+              <div class="slide"><img src="../images/projects/guild_master/knights.gif" height="430"></div>
+              <div class="slide"><img src="../images/projects/guild_master/mage.gif" height="435"></div>
+              <div class="slide"><img src="../images/projects/guild_master/hunter.gif" height="430"></div>
+            </div>      
             
-            <h2 class="mb-3">My Contribution</h2>
-            <h4 class="mb-3 mt-5">Player Interactions</h4>
-            <p>The player is able to:
-            <ul>
-              <li>Send agents to quest. You can do this by clicking the quest button (Scroll) selecting a mission in the table and assigning memebers by clicking them in the right side member panel. You can also bring provisions with them by clicking the icons in the provision panel.</li>
-              <li>Upgrade the guild house and the blacksmith building using the resources gathered by the quests. You can do this by clicking the blacksmith(anvil)/guild hall(banner) buttons and then clicking the green arrow.
-              </li>
-              <li>Recuit heroes to expand the guild. You can do this by opening the guild hall panel and selecting the member you want to recruit (if you have slots available)
-              </li>
-              <li>Make a member work or rest with the click of the state button in their portrait inside the member list panel.
-              </li>
-            </ul>   
+            <h5 class="mb-3 mt-5">Quest System</h5>
+            <p>Implemented quest system, which generates a set amount of quests every day, of increasing difficuly.
+              A quest contains enemies and rewards, which are generated according to the quest, and resources can be spent in a quest to increase it's success chance.
+            </p>     
+            <p>Implemented three enemy types, Skeleton, Bandit and Orc, each one of them is countered by a specific hero type, increasing the success chance of the quest.
+              There's four different types of party sizes for a quest, One Man, Three Man, Five Man and Ten Man.
+              Also, each quest has a type, Adventure or Bounty, which favors a specific resource to increase success chance.
             </p>
-            <p><img src="../images/projects/guild_master/guildhall.png" width="640" alt="" class="img-fluid"></p>
+
+            <div class="slider" id="town-section">
+              <div class="slide"><img src="../images/projects/guild_master/quest_list.jpg" height="500"></div>
+              <div class="slide"><img src="../images/projects/guild_master/quest_counter_image.jpg" height="500"></div>
+            </div>   
             
-            <h4 class="mb-3 mt-5">AI Archetypes</h4>
-            <p>Every agent follows the same Behaviour tree when resting and when they are in quest they do the same, but every agent has it's own FSM when working nested in their Behaviour tree making it behave in a different way.      
-            <br>When resting, the agents recover stamina.        
-            <br>While daylight agents have a 25% of going to 4 different places:</p>        
-            <ul>
-              <li><b>The market:</b> agent walks around the market and visits 4 diferent spots.</li>
-              <li><b>Fishing:</b> agent walks to the fishing spot, picks a fishing pole and starts fishing.</li>
-              <li><b>The tavern:</b> agent walks to the tavern and enters.</li>
-              <li><b>Walk:</b> agent goes for a walk and visit random spots in the map while chilling.</li>
-            </ul>
-            <p><img src="../images/projects/guild_master/fishing.jpg" width="640" alt="" class="img-fluid"></p>
+            <h5 class="mb-3 mt-5">Town Management</h5>
             <p>
-            During night time, an agent has a 55% chance of going to sleep and rest % is divided between the rest of the options above.
-            When in quest, the agent moves to the dungeon and enters in it, when the quest is complete they apear again and a resume.
+              Implemented the ability to recruit new heroes and upgrade them. Also created the improvement of the buildings, the rewards they give to the player and their scaling.
+            </p>
+            <p>
+              Implemented the ability for the player to make a hero work or rest, send them to a quest and follow a hero through the town.
             </p>
             
-            <h5 class="mb-3 mt-5">Knight</h5>     
-            <p>While working knights go to the warrior training area, pick up a weapon and try to find a couple, if they have no couple to fight with they fight solo. If someone is free he will fight him.</p>
-            <p><img src="../images/projects/guild_master/knights.gif" width="640" alt="" class="img-fluid"></p>
-            <h5 class="mb-3 mt-5">Mage</h5>     
-            <p>Mages go to the Alchemy tower while working, they create potions by going to a recipe shelf and selecting a recipe, then they go to a material shelf and pickup the materials needed, at last they go to the alchemy table and craft the potion and repeat.</p>
-            <p><img src="../images/projects/guild_master/mage.gif" width="640" alt="" class="img-fluid"></p>
-            <h5 class="mb-3 mt-5">Hunter</h5>     
-            <p>Hunters while working they gather meat, to do it, they go to the forest and wander for a prey, after they spot one, they kill it and moves towards it, then gather the meat and go again.</p>
-            <p><img src="../images/projects/guild_master/hunter.gif" width="640" alt="" class="img-fluid"></p>
+            <div class="slider" id="res-section">
+              <div class="slide"><img src="../images/projects/guild_master/upgrade.png" height="480"></div>
+              <div class="slide"><img src="../images/projects/guild_master/recruitment.gif" height="440"></div>
+            </div>   
             
-            <h4 class="mb-3 mt-5">Quest System</h4>
-            <p>Quests are randomly generated every new day and have different resources as rewards depending on the difficulty and size of it. There’s one, three, five and ten men quests, also a Quest can be an Adventure or a Bounty. Bounties favor Flame resource as provision, Adventures favor meat.</p>
-            <p><img src="../images/projects/guild_master/quest_list.jpg" width="640" alt="" class="img-fluid"></p>
-            <p>Each quest has enemies assigned to them, which the group will require to counter to improve their chances of finishing the quest. Each member class counters a different enemy. Warriors counter skeletons. Mages counter orcs. Hunters counter bandits.</p>
-            <p><img src="../images/projects/guild_master/quest_counter_image.jpg" width="640" alt="" class="img-fluid"></p>
-            <p>The player can assign provisions to the quest to increase success chance and allow Members to heal stamina during it. At the end of a quest, each member with 0 stamina has a great chance of dying and be removed from the game completely.</p>
-            <h4 class="mb-3 mt-5">Game Progression</h4>
-            <p>
-              Each different unit of the game creates a specific resource. These specific resources are then used on the quests that the game generates for the player.
-              <br>After successfully completing a quest, the player will receive a new set of resource, and those will be used to upgrade the different buildings of the game, recruit new units and improve their level, allowing the player to progress to more difficult quests.
-            </p>
-            <p><img src="../images/projects/guild_master/upgrade.png" width="640" alt="" class="img-fluid"></p>
-            <h6 class="mb-3 mt-5">Resources</h6>     
+            
+            <h5 class="mb-3 mt-5">Resources</h5>  
+            <p>Implemented each type of resource in the game, how to obtain them, how to spend them and their effects on quest</p>   
             <ul>
-              <li><b>Potion:</b> Potions allow a member to heal 50% stamina when it’s stamina drops below 25%. Obtainable from Mage work.</li>
-              <li><b>Meat:</b> Meat greatly increases the success chance of Adventure Quests. Obtainable from Hunter work.</li>
-              <li><b>Flame:</b> Flames greatly increase the success chance of Bounty Quests. Obtainable from Warrior work.</li>
-              <li><b>Gold:</b> Gold is used to upgrade Buildings and level up Members. Obtainable from Quests.</li>
-              <li><b>Shield:</b> Shields are used to upgrade the Blacksmith. Obtainable from Quests.</li>
-              <li><b>Crown:</b> Crowns are used to upgrade the Guild Hall. Obtainable from Quests.</li>
+              <li><b>Potion:</b> allow a member to heal 50% stamina when it’s stamina drops below 25%.</li>
+              <li><b>Meat:</b> greatly increases the success chance of Adventure Quests.</li>
+              <li><b>Flame:</b> greatly increase the success chance of Bounty Quests. </li>
+              <li><b>Gold:</b> used to upgrade Buildings and level up Members.</li>
+              <li><b>Shield:</b> Shields are used to upgrade the Blacksmith.</li>
+              <li><b>Crown:</b> Crowns are used to upgrade the Guild Hall.</li>
             </ul>     
-            <p><img src="../images/projects/guild_master/resources.png" width="480" alt="" class="img-fluid"></p>   
+            <p class="text-center"><img src="../images/projects/guild_master/resources.png" width="480" alt="" class="img-fluid"></p>   
+
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-1">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/blue_alert.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Blue Alert</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/spark_engine.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>Spark Engine</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
           </div> <!-- .col-md-8 -->
           
           <div class="col-lg-4 sidebar ftco-animate">
@@ -145,22 +161,19 @@
                 <li><a href="https://github.com/Marcgs96/Guild-Master" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
-              <h3 class="heading-sidebar">Other Projects</h3>
+              <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
-                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
-                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
-                <li><a href="bazzle.html">Bazzle<span></span></a></li>
-                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
+                <li><a href="#ai-section">AI Archetypes<span></span></a></li>
+                <li><a href="#quest-section">Quest System<span></span></a></li>
+                <li><a href="#town-section">Town Management<span></span></a></li>
+                <li><a href="#res-section">Resources<span></span></a></li>
               </ul>
             </div>
           </div>
-
-
         </div>
       </div>
     </section> <!-- .section -->
-		
+
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
@@ -197,6 +210,7 @@
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/jquery.stellar.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
   <script src="../js/jquery.magnific-popup.min.js"></script>
   <script src="../js/aos.js"></script>
   <script src="../js/jquery.animateNumber.min.js"></script>

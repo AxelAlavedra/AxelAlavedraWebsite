@@ -16,6 +16,42 @@
     scrollProperty: 'scroll'
   });
 
+  $(document).ready(function(){
+	$(".owl-carousel").owlCarousel({
+		items:1,
+		margin:10,
+		dots:false,
+		autoHeight:true,
+		nav: true,
+		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 2
+			},
+			1000: {
+				items: 2
+			}
+		}
+	});
+	$( ".owl-prev").html('<i class="fa fa-chevron-left"></i>');
+	$( ".owl-next").html('<i class="fa fa-chevron-right"></i>');
+  });
+
+  $(document).ready(function(){
+	$('.slider').slick({
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		dots: false,
+		centerMode: true,
+		variableWidth: true,
+	});
+  });
+
+
 
 	var fullHeight = function() {
 

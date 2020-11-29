@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
+    
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
 
     <link rel="stylesheet" href="../css/aos.css">
 
@@ -59,35 +62,73 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">Bazzle</h2>
-            <p>Bazzle is a AR puzzle game made with Unity where the player has to try to get a magic ball into an energy cloud, helping it gain magic powers. The magic ball will always move forward, so the player has to make sure it doesn't fall.</p>
+            <p>Bazzle is a AR puzzle game made with Unity where the player has to try to get a magic ball into an energy cloud, helping it gain magic powers. The magic ball will always move forward, so the player has to make sure it doesn't fall.
             <p>The game features 6 different levels of increasing difficulty where the player has a set amount of pieces he can place to help the magic ball reach it's destination without falling into the void.</p>
-            <p>To place the pieces, the player has to move the target(in our case a card) into the position he wants to place the piece and tap the phone.</p>
-            <p><img src="../images/projects/bazzle/piecespawn.gif" width="420" alt="" class="img-fluid"></p>
-            <p>The different pieces consist of:
-              <ul>
-                <li><b>Platform</b>: This is a basic stone platform, similar to what the rest of the level is made. It allows the ball to continue its movement, and if placed as a wall, will make the ball turn around.</li>
-                <li><b>Jump Rune</b>: This piece allows the ball to bounce up in the air making it very useful to jump pits and obstacles.</li>
-                <li><b>Fire Road</b>: The fire road is a very useful piece which gives the ball a temporary movement speed boost.</li>
-                <li><b>Portal</b>: The last piece, the portal, is a piece required on specific levels which makes the ball teleport between the two portals of the level.</li>
-              </ul>
-            </p>
-              <video height = "480px" muted controls>
-                <source src="../videos/AR_Final.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
+            <video class="img-fluid" muted controls>
+              <source src="../videos/AR_Final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
             <p>This game was made with a group of 3, for the subject "Augmented Reality" of the Bachelor's Degree in Video Game Design and Development at the UPC.</p>
             <p>I'm really happy of the final result, as it was a great experience learning about AR and the game turned out to be fun and challenging. I wish it didn't get stuck as a simple university project...</p>
 
-            <h2 class="mb-3 mt-5">My contribution</h2>
-            <h4 class="mb-3 mt-5">Gameplay</h4>
-            <p>For this project I took the role of Gameplay Programmer, creating the ball behaviour. Made the forward movement, jump, bounce and turn around on collision with a wall.</p>
-            <p><img src="../images/projects/bazzle/win.gif" width="420" alt="" class="img-fluid"></p>
-            <p>After finishing with the behaviour of the ball, I also implemented the behaviour of all the different pieces of the game, as well as the spawning system through the position of the card target.</p>
-            <p><img src="../images/projects/bazzle/cool.gif" width="420" alt="" class="img-fluid"></p>
-            <p>To finish my work, I developed the game loop, which includes detecting the "death" of the ball and restarting the level to it's original state to play again. Aswell as creating the different managers needed to handle the loading of each level and the possiblity of different ball skins.</p>
-            <p><img src="../images/projects/bazzle/fail.gif" width="420" alt="" class="img-fluid"></p>
+            <h2 class="mb-3 mt-5" id="ball-section">My Contribution</h2>
+            <h5 class="mb-3 mt-5">Ball</h5>
+            <p>As a Gameplay Programmer, I implemented the ball behaviour. This includes the movementforward movement, bounce and turn around on collision with a wall, aswell as the different reactions to the pieces.</p>
+            <p><img src="../images/projects/bazzle/cool.gif" alt="" class="img-fluid" id="pieces-section"></p>
+
+            <h5 class="mb-3 mt-5">Pieces</h5>
+            <p>I implemented the behaviour of all the different pieces of the game, as well as the spawning system through the position of the card target.
+              <p>The different pieces consist of:
+                <ul>
+                  <li><b>Platform</b>: It allows the ball to continue its movement, and if placed as a wall, will make the ball turn around.</li>
+                  <li><b>Jump Rune</b>: Allows the ball to bounce up in the air making it very useful to jump pits and obstacles.</li>
+                  <li><b>Fire Road</b>: Gives the ball a temporary movement speed boost.</li>
+                  <li><b>Portal</b>: Makes the ball teleport between the two portals of the level.</li>
+                </ul>
+              </p>
+            </p>
+            <p><img src="../images/projects/bazzle/piecespawn.gif" width="820px" alt="" class="img-fluid" id="loop-section"></p>
+            
+            <h5 class="mb-3 mt-5" >Game Loop</h5>
+            <p>Developed the game loop, which includes detecting the "death" of the ball and restarting the level to it's original state to play again.
+               Aswell as creating the different managers needed to handle the loading of each level and the possiblity of different ball skins.</p>
+            <div class="slider">
+              <div class="slide"><img src="../images/projects/bazzle/fail.gif" height="420"></div>
+              <div class="slide"><img src="../images/projects/bazzle/win.gif" height="420"></div>
+            </div>      
+
+
+
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-5">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/spark_engine.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Spark Engine</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/witcher.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>The Witcher: A Bard's Tale</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div> <!-- .col-md-8 -->
           
+
+
           <div class="col-lg-4 sidebar ftco-animate">
             <div class="sidebar-box ftco-animate">
               <br><br>
@@ -97,13 +138,11 @@
                 <li><a href="https://github.com/AlejandroParis/Ar_Project" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
-              <h3 class="heading-sidebar">Other Projects</h3>
+              <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
-                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
-                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
-                <li><a href="guild_master.html">Guild Master<span></span></a></li>
-                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
+                <li><a href="#ball-section">Ball<span></span></a></li>
+                <li><a href="#pieces-section">Pieces<span></span></a></li>
+                <li><a href="#loop-section">Game Loop<span></span></a></li>
               </ul>
             </div>
           </div>
@@ -116,15 +155,15 @@
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
-        <div class="row">
-			<div class="col-md-12 text-center">
-				<ul class="ftco-footer-social list-unstyled float-md float-lft mt-5">
-					<li class="ftco-animate"><a href="https://linkedin.com/in/axel-alavedra-cabello-113666121/"target="_blank"><span class="icon-linkedin"></span></a></li>
-					<li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
-					<li class="ftco-animate"><a href="https://github.com/AxelAlavedra"target="_blank"><span class="icon-github"></span></a></li>
-				</ul>
-		  	</div>
-        </div>
+      <div class="row">
+			  <div class="col-md-12 text-center">
+          <ul class="ftco-footer-social list-unstyled float-md float-lft mt-5">
+            <li class="ftco-animate"><a href="https://linkedin.com/in/axel-alavedra-cabello-113666121/"target="_blank"><span class="icon-linkedin"></span></a></li>
+            <li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="https://github.com/AxelAlavedra"target="_blank"><span class="icon-github"></span></a></li>
+          </ul>
+		    </div>
+      </div>
         <div class="row">
           <div class="col-md-12 text-center">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -149,6 +188,7 @@
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/jquery.stellar.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
   <script src="../js/jquery.magnific-popup.min.js"></script>
   <script src="../js/aos.js"></script>
   <script src="../js/jquery.animateNumber.min.js"></script>

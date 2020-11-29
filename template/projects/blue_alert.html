@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
 
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="../css/aos.css">
 
     <link rel="stylesheet" href="../css/ionicons.min.css">
@@ -62,70 +65,91 @@
             <p>Blue Alert is a strategy game that combines elements of Deck-building and Tower Defense, the goal of the game is to simplify the classic strategy of an RTS to the point where it becomes an accessible game for a casual player, looking for fast games.
             <br>The game consists of two phases; the military strategy phase where the player builds his army, improves it and decides where to attack, and then, there is the combat phase, where the player deploys his units to attack the enemy's core. 
             <br>The assets and some mechanics are from Command and Conquer: Red Alert 2.
-            <p>
-              <video height = "480px" muted controls>
+            <p class="text-center">
+              <video class="img-fluid" muted controls>
                 <source src="../videos/blue_alert_gameplay.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
             </p>
             <p>This game was made with a group of colleagues from the subject "Project 2" of the Bachelor's Degree in Video Game Design and Development at the UPC. All the assets were taken from the game Command and Conquer: Red Alert 2</p>
 
-            <h2 class="mb-3 mt-5">My contribution</h2>
-            <h4 class="mb-3 mt-5">Entity System</h4>
-            Implemented an entity system that splits entities into Dynamic and Static. Dynamic entities are all the units of the game, Static entities are the buildings that you capture and try to destroy.
-            <br>Implemented Entity Factoy which creates units related to a card (the card gives the stats to the entity like movement speed, damage, etc).
-            <br>Core entity, which contains a deck of cards, spawns units using this cards and is the objective of the battle.
+            <h2 class="mb-3 mt-5" id="entity-section">My contribution</h2>
+            <h5 class="mb-3 mt-5">Entity System</h5>
+            <p>Implemented an entity system that splits entities into Dynamic and Static. Dynamic entities are all the units of the game, Static entities are the buildings that you capture and try to destroy.
+            <p>Implemented Entity Factoy which creates units related to a card (the card gives the stats to the entity like movement speed, damage, etc).
+            <p id="card-section">Core entity, which contains a deck of cards, spawns units using this cards and is the objective of the battle.</p>
 
-            <h4 class="mb-3 mt-5">Card/Deck System</h4>
-            Implemented card system, a card contains information about unit type and all it’s stats like movement speed, attack damage, life, and many others.
-            <br>Card factory that reads card stats from xml and creates card according to type wanted.
-            <br>Deck of cards for the player and the enemy. Collection of cards for the player, which contains all the cards that the player obtains during the game.
-            <br>Card scales stats depending on level
-            <p><img src="../images/projects/blue_alert/deploygif.gif" width="260" height="260" alt="" class="img-fluid"></p>
+            <h5 class="mb-3 mt-5">Card/Deck System</h5>
+            <p>Implemented card system, a card contains information about unit type and all it’s stats like movement speed, attack damage, life, and many others.
+            <p>Card factory that reads card stats from xml and creates card according to type wanted.
+            <p>Deck of cards for the player and the enemy. Collection of cards for the player, which contains all the cards that the player obtains during the game.
+            <p>Card scales stats depending on level.
+            Implemented unit spawn through card usage.
+            Limited spawn of units inside spawn area</p>
+            <p class="text-center"><img src="../images/projects/blue_alert/deploygif.gif" width="260" height="260" alt="" class="img-fluid" id="unit-section"></p>
 
-            <h4 class="mb-3 mt-5">Units</h4>
-            Implemented unit spawn through card usage
-            <br>Limited spawn of units inside spawn area
-            <br>Unit movement through A* pathfinding
-            <p><img src="../images/projects/blue_alert/basicattack.gif" width="260" height="260" alt="" class="img-fluid"></p>
-
-            <h5 class="mb-3 mt-3">Animations</h5>
-            Implemented animations for each unit in the game
-            <br>Adjust animations pivot for units
-            <br>Movement and attack animations frame speeds are related to the movement speed and attack speed of the unit
-            <br>Unit dynamic animations
-            <p><img src="../images/projects/blue_alert/penetrating.gif" width="260" height="260" alt="" class="img-fluid"></p>
-
-            <h5 class="mb-3 mt-3">Combat</h5>
-            Implemented the 3 different attack types in the game (Basic attack, Piercing attack and AOE attack)
-            <br>Particles for each type of attack(AOE explosion, bullet for basic and piercing)
-            <br>Shot particle rotates and moves to enemy position
-            <br>All damage calculations
-            <p><img src="../images/projects/blue_alert/aoegif.gif" width="260" height="260" alt="" class="img-fluid"></p>
-            
-            <h5 class="mb-3 mt-3">AI</h5>
-            Unit moves to the enemy Core
-            <br>If an Entity enters in attack range, starts attacking that unit
-            <br>After killing enemy, looks for more entities in range, if no entity is in range, continues moving to enemy Core.
-            <p><img src="../images/projects/blue_alert/lifebargif.gif" width="260" height="260" alt="" class="img-fluid"></p>
+            <h5 class="mb-3 mt-5">Units & Combat</h5>
+            <p>Unit movement through A* pathfinding.
+            Unit moves to the enemy Core.
+            If an Entity enters in attack range, starts attacking that unit.
+            After killing enemy, looks for more entities in range, if no entity is in range, continues moving to enemy Core.</p>
+            <p>Implemented animations for each unit in the game.
+            Adjust animations pivot for units.
+            Movement and attack animations frame speeds are related to the movement speed and attack speed of the unit.
+            Unit dynamic animations.</p>
+            <p>Implemented the 3 different attack types in the game (Basic attack, Piercing attack and AOE attack).
+            Particles for each type of attack(AOE explosion, bullet for basic and piercing).
+            Shot particle rotates and moves to enemy position.
+            All damage calculations.
+            Player Ultimate Ability.</p>
+            <div class="slider" id="opp-section">
+              <div class="slide"><img src="../images/projects/blue_alert/lifebargif.gif" height="380"></div>
+              <div class="slide"><img src="../images/projects/blue_alert/basicattack.gif" height="380"></div>
+              <div class="slide"><img src="../images/projects/blue_alert/aoegif.gif" height="380"></div>
+              <div class="slide"><img src="../images/projects/blue_alert/penetrating.gif" height="380"></div>
+              <div class="slide"><img src="../images/projects/blue_alert/nuke.gif" height="380"></div>
+            </div>      
             
             
-            <h4 class="mb-3 mt-5">Enemy AI</h4>
-            Implemented a basic opponent AI that decides what to play depending on situation.
+            <h5 class="mb-3 mt-5">Opponent AI</h5>
+            <p>Implemented a basic opponent AI that decides what to play depending on situation.
             <br>Select appropriate counter to opponent units
-            <br>Prioritizes zone of the map to spawn depending on amount of enemies, damage and proximity to Core.
+            <br id="save-section">Prioritizes zone of the map to spawn depending on amount of enemies, damage and proximity to Core.</p>
 
-
-            <h4 class="mb-3 mt-5">Save/Load</h4>
-            Game automatically saves each time a battle has finished.
+            <h5 class="mb-3 mt-5">Save/Load</h5>
+            <p>Game automatically saves each time a battle has finished.
             <br>If player loses, the game recovers the state at which the current stage was started and loads it.
-            <br>Load save file function
+            <br>Load save file function</p>
+            
 
-            <h4 class="mb-3 mt-5">Other tasks</h4> 
-            Player ultimate ability
-            <br>Implemented color change on life bars depending on value
-            <p><img src="../images/projects/blue_alert/nuke.gif" width="260" height="260" alt="" class="img-fluid"></p>
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-1">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/timeless.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Timeless Warriors</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/guild_master.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>Guild Master</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
+  
           </div> <!-- .col-md-8 -->
           
           <div class="col-lg-4 sidebar ftco-animate">
@@ -138,19 +162,20 @@
                 <li><a href="https://github.com/hot-dog-games/Blue-Alert" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
-              <h3 class="heading-sidebar">Other Projects</h3>
+              <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
-                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
-                <li><a href="bazzle.html">Bazzle<span></span></a></li>
-                <li><a href="guild_master.html">Guild Master<span></span></a></li>
-                <li><a href="spark_engine.html">Spark Engine<span></span></a></li>
+                <li><a href="#entity-section">Entity System<span></span></a></li>
+                <li><a href="#card-section">Card/Deck System<span></span></a></li>
+                <li><a href="#unit-section">Units & Combat<span></span></a></li>
+                <li><a href="#opp-section">Opponent AI<span></span></a></li>
+                <li><a href="#save-section">Save/Load<span></span></a></li>
               </ul>
             </div>
           </div>
 
 
         </div>
+
       </div>
     </section> <!-- .section -->
 		
@@ -190,6 +215,7 @@
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/jquery.stellar.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
   <script src="../js/jquery.magnific-popup.min.js"></script>
   <script src="../js/aos.js"></script>
   <script src="../js/jquery.animateNumber.min.js"></script>

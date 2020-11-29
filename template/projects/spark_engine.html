@@ -74,35 +74,74 @@
             </p>
 
             <h2 class="mb-3 mt-5">My contribution</h2>
-            <p>To build an engine is an enormous task, and there were many different contributions to be done. Some of the ones I have done were:
-            </p>
-            <ul>
-              <li><b>Component info on Inspector</b>: This shows relevant information of each Component on the Inspector window, to debug and change the values on the fly.</li>
-              <li><b>Quadtree/Octree</b>: We developed a Quadtree and then an Octree for static GameObjects to optimize the frustum culling for the rendering.</li>
-              <p><img src="../images/projects/spark_engine/octree.JPG" alt="" width="348" class="img-fluid"></p>
-              <li><b>Render Scene to Texture</b>: This was a small but necessary task, rendering the current game scene into a texture to show on different windows</li>
-              <li><b>Scene window resizing with aspect ratio</b>: Made it so the Scene and Game windows were able to be resized and always keep the aspect ratio</li>
-              <li><b>Scene serialization. Load/Save scene with UI</b>: We can serialize the setup of a scene and save it in a binary file taking minimum space requirement, after that we can load that same file to recover the scene.</li>
+            <p id="res-section">To build an engine is an enormous task, and there were many different contributions to be done. Some of the ones I have done were:
+            </p>    
+              <h5 class="mb-3 mt-5">Resource Management</h5>
+              <ul>
               <li><b>Save mesh, texture and models to own file format</b>: Same as the scene, but this time with meshes, textures and models on our Library, this way we could efficiently save and load these type of files without occupying a lot of disk space.</li>
-              <li><b>Module Resources (meta files, reference counting, etc)</b>: This was a huge task, the module to manage all the assets of our engine. The base of the module is making each asset have its own meta file which links the asset with the library file. With this meta, we made it so upon start, all resources not in library get imported, if they have meta file, it gets imported with meta file info.
+              <li><b>Module Resources (meta files, reference counting, etc)</b>: Make each asset have its own meta file which links the asset with the library file. 
+                With this meta, we made it so upon start, all resources not in library get imported, if they have meta file, it gets imported with meta file info.
                 <br>Also on start, all resources already in library get created from meta.
                 Resources in library not linked to any meta get deleted on startup.
                 On startup if meta file and resource file are not in same folder, it will move meta to resource folder and Reference counting to not load the same asset twice.</li>
-                <p><img src="../images/projects/spark_engine/resources.JPG" alt="" class="img-fluid"></p>
+                <p class="text-center"><img src="../images/projects/spark_engine/resources.JPG" alt="" class="img-fluid"></p>
               <li><b>Project window</b>: This window from the engine shows all the assets located in the current selected folder and allows to create new folderes, move assets between folders and delete the asset from the project.</li>
-              <p><img src="../images/projects/spark_engine/projectwindow.JPG" alt="" class="img-fluid"></p>
+              <p class="text-center"><img src="../images/projects/spark_engine/projectwindow.JPG" alt="" class="img-fluid"></p>
               <li><b>Resource Import settings</b>: Following with the asset window, once an asset is selected, it will show it's import settings on the Inspector tab, allowing to change the way a mesh was imported or a texture settings.</li>
-              <p><img src="../images/projects/spark_engine/import.JPG" alt="" class="img-fluid"></p>
+              <p class="text-center" id="scene-section"><img src="../images/projects/spark_engine/import.JPG" alt="" class="img-fluid"></p>
+            </ul>
+              
+              <h5 class="mb-3 mt-5">Scene/Game</h5>
+              <li><b>Render Scene to Texture</b>: This was a small but necessary task, rendering the current game scene into a texture to show on different windows</li>
+              <li><b>Scene window resizing with aspect ratio</b>: Made it so the Scene and Game windows were able to be resized and always keep the aspect ratio</li>
+              <li><b>Scene serialization. Load/Save scene with UI</b>: We can serialize the setup of a scene and save it in a binary file taking minimum space requirement, after that we can load that same file to recover the scene.</li>
               <li><b>Game Start/Pause and state recovery</b>: On start, the engine saves a temporary file with the scene serialized, this way when the user stops the game, the scene will be recovered to it's original state with that file. It allows allows to pause the execution of the game and change the speed at which it runs.</li>
-              <li><b>Time module</b>: This module manages the timescale of the engine, keeps track of the frame count, the time since engine startup and the time since game start.</li>
+              <li><b id="anim-section">Time module</b>: This module manages the timescale of the engine, keeps track of the frame count, the time since engine startup and the time since game start.</li>
+            </ul>
+              <h5 class="mb-3 mt-5">Animation Module</h5>
+            <ul>
               <li><b>Skinning</b>: Very simple skinning method, without shader, to deform the mesh with the current bones.</li>
               <p><img src="../images/projects/witcher/skinning.gif" alt="" class="img-fluid"></p>
               <li><b>Bones import and Skeleton attachment</b>: Importing bones from a model, saving them and then being able to link the root bone of the skeleton to it's gameobject in the scene for the future skinning.</li>
               <li><b>Animation import</b>: Import animation files with each different type of key(position/rotation/scale) of each bone and saving it into binary file.</li>
               <li><b>Animation clips</b>: Made it so from an animation file, we can cut it into different clips marking the initial frame and the end frame, to have each clip separated for proper use.</li>
-              <p><img src="../images/projects/spark_engine/clips.gif" alt="" class="img-fluid"></p>
-              <li><b>Animator Controller file - Import/Save/Load</b>: Converted the animator controller(file which contains animation states and transitions) into binary file which then can be imported to another project, saved, and loaded</li>
+              <p class="text-center"><img src="../images/projects/spark_engine/clips.gif" alt="" class="img-fluid"></p>
+              <li><b id="other-section">Animator Controller file - Import/Save/Load</b>: Converted the animator controller(file which contains animation states and transitions) into binary file which then can be imported to another project, saved, and loaded</li>
             </ul>
+
+            <h5 class="mb-3 mt-5">Other Tasks</h5>
+            <ul>
+              <li><b>Component info on Inspector</b>: This shows relevant information of each Component on the Inspector window, to debug and change the values on the fly.</li>
+              <li><b>Quadtree/Octree</b>: We developed a Quadtree and then an Octree for static GameObjects to optimize the frustum culling for the rendering.</li>
+              <p class="text-center"><img src="../images/projects/spark_engine/octree.JPG" alt="" width="380" class="img-fluid"></p>
+            </ul>
+
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-5">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/guild_master.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Guild Master</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/bazzle.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>Bazzle</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div> <!-- .col-md-8 -->
 
           <div class="col-lg-4 sidebar ftco-animate">
@@ -115,13 +154,12 @@
                 <li><a href="https://github.com/ProboxAM/SparkEngine" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
-              <h3 class="heading-sidebar">Other Projects</h3>
+              <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
-                <li><a href="witcher.html">The Witcher: A Bard's Tale<span></span></a></li>
-                <li><a href="timeless.html">Timeless Warriors<span></span></a></li>
-                <li><a href="blue_alert.html">Blue Alert<span></span></a></li>
-                <li><a href="bazzle.html">Bazzle<span></span></a></li>
-                <li><a href="guild_master.html">Guild Master<span></span></a></li>
+                <li><a href="#res-section">Resource Management<span></span></a></li>
+                <li><a href="#scene-section">Scene/Game<span></span></a></li>
+                <li><a href="#anim-section">Animation Module<span></span></a></li>
+                <li><a href="#other-section">Other Tasks<span></span></a></li>
               </ul>
             </div>
           </div>
