@@ -43,12 +43,12 @@
 	      </div>
 	    </div>
     </nav>  
-    <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/TW.png');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap js-fullheight" style="background-image: url('../images/projects/timeless/menu.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread">Timeless Warriors</h1>
+            <h1 class="mb-3 bread"> </h1>
           </div>
         </div>
       </div>
@@ -62,8 +62,11 @@
             <p>Timeless Warriors is a 2D fighting game, greatly inspired by Super Smash Bros. Melee. The game features a total of 4 unique characters, each one with it's own moveset making it feel special.
               The objective of the game is to knock your opponenets away from the stage with your attacks and the different kinds of gadgets that appear during the brawl.
             </p>
-            <p>
-              <img src="../images/main/TW.png" alt="" class="img-fluid">
+            <p class="text-center">
+              <video class="img-fluid" muted controls>
+                <source src="../videos/timeless.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
             </p>
             <p>
               This game was developed by a group of 4 during the second year of Higher Education in Computer Games and Programming Skills. I mostly focused on programming the gameplay, but I also helped with Design and some Animations for the characters.          
@@ -81,13 +84,20 @@
             <p>
               When the basic movement was finished, I started working on the combat mechanics, laying out the base structure of our Attacks.
               Each character could have 5 light attacks, 3 special attacks and 1 ultimate move, so it was very important to be able to easily create new kinds of attacks for each character with our structure.
+              <p>
+                <img src="../images/main/TW.png" alt="" class="img-fluid">
+              </p>
               <p id="chars-section">When the structure was set, I worked on how each attack would interact with the entity it hit, since each attack could have a different force value and direction for the knockback and of course, damage, it would apply.
             </p>
-            <h5 class="mb-3 mt-5">Characters & Others</h5>
+            <h5 class="mb-3 mt-5">Characters</h5>
             <p>
               When the attacks were finished, I implemented the dash and parry mechanics to help with the defensive gameplay and also the energy system for the ultimate move. 
               <br>After all the base was developed for one character, I continued implementing each individual character with its own attacks and special mechanics.
-             <p> Each character had it's own special mechanic, for example, Kara the Valkyrie could jump three times and had slow fall or the Dark Knight, who could drop a shadow clone on the battlefield which would copy his basic attacks and allowed the player to teleport to it at any time.
+             <p id="res-section"> Each character had it's own special mechanic, for example, Kara the Valkyrie could jump three times and had slow fall or the Dark Knight, who could drop a shadow clone on the battlefield which would copy his basic attacks and allowed the player to teleport to it at any time.
+            </p>
+            <h5 class="mb-3 mt-5">Resource Management</h5>
+            <p>
+              To finish my contribution, I implemented how we managed and loaded each different scenario to fight, the characters and each skin of them.
             </p>
 
 
@@ -135,7 +145,8 @@
               <ul class="categories">
                 <li><a href="#char-mov-section">Character Movement<span></span></a></li>
                 <li><a href="#char-combat-section">Character Combat<span></span></a></li>
-                <li><a href="#chars-section">Characters & Others<span></span></a></li>
+                <li><a href="#chars-section">Characters<span></span></a></li>
+                <li><a href="#res-section">Resource Management<span></span></a></li>
               </ul>
             </div>
           </div>
