@@ -51,7 +51,25 @@
 	});
   });
 
+  $(document).ready(function(){
 
+    $(".filter-button").click(function(){
+		var ourClass = $(this).attr('data-filter');
+		$('#filterOptions').children('button.btn-primary').removeClass('btn-primary');
+		
+        $(this).removeClass('btn-default');
+		$(this).addClass('btn-primary');
+
+        if (ourClass == 'all') {
+            $('#ourHolder').children().show();
+        } else {
+            $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+            $('#ourHolder').children('div.' + ourClass).show();
+        }
+
+        return false;
+    });
+    });
 
 	var fullHeight = function() {
 
