@@ -62,38 +62,40 @@
             <p>Timeless Warriors is a 2D fighting game, greatly inspired by Super Smash Bros. Melee. The game features a total of 4 unique characters, each one with it's own moveset making it feel special.
               The objective of the game is to knock your opponenets away from the stage with your attacks and the different kinds of gadgets that appear during the brawl.
             </p>
-            <p class="text-center">
-              <video class="img-fluid" muted controls>
-                <source src="../videos/timeless.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-            </p>
+            <div class="videoWrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ldIcG-TeRRo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <p>
               This game was developed by a group of 4 during the second year of Higher Education in Computer Games and Programming Skills. I mostly focused on programming the gameplay, but I also helped with Design and some Animations for the characters.          
               <p>Working on Timeless Warriors was an amazing experience, since it was the first fully fleshed game I developed on Unity, before it was all small class projects. 
               I feel like my skills as a gameplay programmer improved a lot thanks to this project, and it's where my love for programming games really started.</p>
             </p>
 
-            <h2 class="mb-3 mt-5" id="char-mov-section">My contribution</h2>
-            <h5 class="mb-3 mt-5">Character Movement</h5>
-            <p>
-              As I mentioned before, I was focused an programming the gameplay of the game. I started by working on our Entity structure, making it so we could easily have bots and different kinds of character.
-              <p id="char-combat-section">After laying out the base structure, I developed the movement of the characters, all based on Stats which could inffluence the way our character plays like movement speed, number of jumps, falling speed, etc.
+            <h2 class="mb-3 mt-5" id="entity-section">My contribution</h2>
+            <h5 class="mb-3 mt-5">Entity Structure</h5>
+            <p id="char-mov-section">I was focused on programming the gameplay of the game. I started by working on our Entity structure, making it so we could easily have bots and different kinds of character.</p>
+            
+            <h5 class="mb-3 mt-5">Character Movement</h5> 
+            <p id="char-combat-section">I also implemented the movement of the characters, which was side movement and double jump all based on Stats which could influence the way our character plays like movement speed, number of jumps, falling speed, etc.
             </p>
+
             <h5 class="mb-3 mt-5">Character Combat</h5>
             <p>
-              When the basic movement was finished, I started working on the combat mechanics, laying out the base structure of our Attacks.
-              Each character could have 5 light attacks, 3 special attacks and 1 ultimate move, so it was very important to be able to easily create new kinds of attacks for each character with our structure.
+              Implemented all the combat mechanics in the game, laying out the base structure of our Attacks.
+              Each character could have 5 light attacks(2 grounded, 3 on air), 3 special attacks and 1 ultimate move, so it was very important to be able to easily create new kinds of attacks for each character with our structure.
               <p>
                 <img src="../images/main/TW.png" alt="" class="img-fluid">
               </p>
-              <p id="chars-section">When the structure was set, I worked on how each attack would interact with the entity it hit, since each attack could have a different force value and direction for the knockback and of course, damage, it would apply.
+              <p id="chars-section">Also worked on how each attack would interact with the entity it hit, since each attack could have a different force value and direction for the knockback and of course, damage, it would apply.
+                <p>I implemented the dash and parry mechanics to help with the defensive gameplay, the edge grab mechanic and also the energy system for the ultimate move. </p>
             </p>
+
             <h5 class="mb-3 mt-5">Characters</h5>
             <p>
-              When the attacks were finished, I implemented the dash and parry mechanics to help with the defensive gameplay and also the energy system for the ultimate move. 
-              <br>After all the base was developed for one character, I continued implementing each individual character with its own attacks and special mechanics.
-             <p id="res-section"> Each character had it's own special mechanic, for example, Kara the Valkyrie could jump three times and had slow fall or the Dark Knight, who could drop a shadow clone on the battlefield which would copy his basic attacks and allowed the player to teleport to it at any time.
+              
+              <p>Implementing each individual character with its own attacks, special mechanics and ultimate attack.
+              <img src="../images/projects/timeless/timelessfight.png" alt="" class="img-fluid">
+              <p id="res-section"> Each character had it's own special mechanic, for example, Kara the Valkyrie could jump three times and had slow fall or the Dark Knight, who could drop a shadow clone on the battlefield which would copy his basic attacks and allowed the player to teleport to it at any time.
             </p>
             <h5 class="mb-3 mt-5">Resource Management</h5>
             <p>
@@ -106,21 +108,21 @@
                 <div class="row d-flex mb-5">
                   <div class="col-md-5 col-lg-7 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                      <a href="../projects/witcher.html">
+                      <a href="../projects/blue_alert.html">
                       <div class="icon d-flex align-items-center justify-content-center">
                         <span class="icon-arrow-left"></span>
                       </div>
-                      <p>The Witcher: A Bard's Tale</p>
+                      <p>Blue Alert</p>
                       </a>
                     </div>
                   </div>
                   <div class="col-md-7 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                      <a href="../projects/blue_alert.html">
+                      <a href="../projects/bazzle.html">
                       <div class="icon d-flex align-items-center justify-content-center">
                         <span class="icon-arrow-right"></span>
                       </div>
-                      <p>Blue Alert</p>
+                      <p>Bazzle</p>
                       </a>
                     </div>
                   </div>
@@ -136,13 +138,14 @@
               <br><br>
             	<h3 class="heading-sidebar">Links</h3>
               <ul class="categories">
-                <li><a href="https://bigbrainteam.github.io/TimelessWarriors/" target="_blank">Website<span></span></a></li>
-                <li><a href="https://github.com/BigBrainTeam/TimelessWarriors/releases/latest" target="_blank">Download<span></span></a></li>
-                <li><a href="https://github.com/BigBrainTeam/TimelessWarriors" target="_blank">Github<span></span></a></li>
+                <li><a href="https://houndgamesteam.github.io/TimelessWarriors/" target="_blank">Website<span></span></a></li>
+                <li><a href="https://github.com/HoundGamesTeam/TimelessWarriors/releases/latest" target="_blank">Download<span></span></a></li>
+                <li><a href="https://github.com/HoundGamesTeam/TimelessWarriors" target="_blank">Github<span></span></a></li>
               </ul>
               <br>
               <h3 class="heading-sidebar">Contribution</h3>
               <ul class="categories">
+                <li><a href="#entity-section">Entity Structure<span></span></a></li>
                 <li><a href="#char-mov-section">Character Movement<span></span></a></li>
                 <li><a href="#char-combat-section">Character Combat<span></span></a></li>
                 <li><a href="#chars-section">Characters<span></span></a></li>

@@ -51,7 +51,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread">Fireman Rescue</h1>
+            <h1 class="mb-3 bread"></h1>
           </div>
         </div>
       </div>
@@ -64,17 +64,17 @@
             <h2 class="mb-3">Fireman Rescue</h2>
             <p>Fireman Rescue is a Serious Game which simulates different emergency situations for student firefighters of Institut de Seguretat Pública de Catalunya (ISPC). It is made so students can practice their decision making on emergency situations without risks.
               Fireman Rescue was made with Unity using C# and developed at the company Viod Games while I was an Intern.</p>
-            <video class="img-fluid" muted controls>
-              <source src="../videos/fireman.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
+            <div class="videoWrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hZvklxrmOKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
             <h2 class="mb-3 mt-5" id="user-section">My Contribution</h2>
             
             <h5 class="mb-3 mt-5">User Actions</h5>
             <p id="objective-section">Implemented the actions the user can do in the game, which depend on the situation.
-             These were picking items from the truck, interacting with the NPCs in the scenario and using the equipped items during the simulation.</p>
-            
+             These were picking items from the truck, interacting with the NPCs in the scenario and using the equipped items during the simulation and even putting out fires.</p>
+            <p class="text-center"><img src="../images/projects/fireman_rescue/actions.png" class="img-fluid"></p>  
+
             <h5 class="mb-3 mt-5">Objective System</h5>
             <p id="score-section">Also implemented a simple objective system based on a Node Tree, which keeps track of the user actions and the available actions it can access from that point in the emergency.
               The objectives required for each level, were gathered from a Data Base as a JSON and then generated in-game. This allowed us to make changes for the level without having to change game files.
@@ -84,32 +84,39 @@
             <p id="helper-section">Following with the Objective System, I also worked on a Score System which rewards the player with more or less score depending on the order the actions were taken and also lowers the score if an action was not done during the simulation.
               This score was later used to show a rank obtained on the simulation so the students could improve and practice.
             </p>
+            <p class="text-center"><img src="../images/projects/fireman_rescue/score.png" class="img-fluid"></p>  
             
             <h5 class="mb-3 mt-5">Fireman Helpers AI</h5>
-            <p>My last contributuon was a very basic AI for Helpers, which were NPCs that the user can asign different actions to realize while the user focuses on other taks.
+            <p id="int-section">Implemented a very basic AI for Helpers, which were NPCs that the user can asign different actions to realize while the user focuses on other taks.
               They could open doors, put off fires, etc. This allowed the student to practice giving orders and splitting the work required on an emergency situation.
             </p>
+            <p class="text-center"><img src="../images/projects/fireman_rescue/helpers.png" class="img-fluid"></p>  
+
+            <h5 class="mb-3 mt-5">User Integration</h5>
+            <p>Also contributed on the creation of user registration and login through our data base, this was done to give sudents access to the product and also to differentiate professors from students, allowing professors to have extra features.
+            </p>
+
 
             <section class="ftco-section contact-section ftco-no-pb">
               <div class="container">
                 <div class="row d-flex mb-5">
                   <div class="col-md-5 col-lg-7 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                      <a href="../projects/guild_master.html">
+                      <a href="../projects/salty_slime.html">
                       <div class="icon d-flex align-items-center justify-content-center">
                         <span class="icon-arrow-left"></span>
                       </div>
-                      <p>Guild Master</p>
+                      <p>Salty the Slime</p>
                       </a>
                     </div>
                   </div>
                   <div class="col-md-7 col-lg-3 d-flex ftco-animate">
                     <div class="align-self-stretch box p-4 text-center">
-                      <a href="../projects/bazzle.html">
+                      <a href="../projects/witcher.html">
                       <div class="icon d-flex align-items-center justify-content-center">
                         <span class="icon-arrow-right"></span>
                       </div>
-                      <p>Bazzle</p>
+                      <p>The Witcher: A Bard's Tale</p>
                       </a>
                     </div>
                   </div>
@@ -134,6 +141,7 @@
                 <li><a href="#objective-section">Objective System<span></span></a></li>
                 <li><a href="#score-section">Score System<span></span></a></li>
                 <li><a href="#helper-section">Helpers AI<span></span></a></li>
+                <li><a href="#int-section">User Integration<span></span></a></li>
               </ul>
             </div>
           </div>
