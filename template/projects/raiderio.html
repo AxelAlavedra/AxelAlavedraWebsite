@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Axel Alavedra - Game Developer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="../index.html">Axel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="../index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>  
+	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/raider.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Raider IO</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">Raider IO</h2>
+            <p>Raider IO is a PVP online game up to 20 players, where each one can choose between three different classes to fight their friends on an online arena. Each class has it's own unique Spell, creating a different type of gameplay with each class.</p>
+            <p>Killing an enemy will increase the player level, making them bigger and stronger, but slower! If the player gets killed, they will lose their level and start from scratch, also, the killer will steal the level and grow.</p>
+            
+            <div class="videoWrapper">
+              <iframe width="560" height="315"src="https://www.youtube.com/embed/yu7m5GCgbDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p>This game was made with my colleague Marc Guillen, for the subject "Networks and Online Games" of the Bachelor's Degree in Video Game Design and Development at the UPC.</p>
+            <p>On this project we had to develop our own Network System for the game engine in C++ using UDP and implement different kinds of systems to handle input latency, packet loss and others.</p>
+
+            <h2 class="mb-3 mt-5" id="common-section">My Contribution</h2>
+            <h5 class="mb-3 mt-5">Common Features</h5>
+            <p>The majority of the network part was developed by both of us doing pair programming. The list of features we developed together are the following:
+              <ul>
+               <li><b>Server/Client connection</b></li>
+               <li><b>Data Serialization</b></li>
+               <li><b>Connection Timeout</b>: If the Server or the Client doesn't receive a Ping Packet in a set amount of time, a Timeout will be considered and a Disconnect will be executed.</li>
+               <li><b>World State Replication with Managers</b>: The Server sends replication packets to the Clients every set amount of time and the Clients read those packets succesfully and replicate the state of the server.</li>
+               <li><b>Reliability for UDP (Delivery Manager and Input Packet Redundancy)</b>: Input Packet Redundancy makes sure the server receives all the input packets in order. Delivery Manager recognizes when a packet was or not succesfull and calls a delegate to handle.</li>
+               <li><b>Client Side Prediction with Server Reconciliation for Movement</b>: The input of the Client is handled client side making it feel smooth and react quick. When a Replication Packet is received by the Client, the state is recovered through Server Reconciliation reapplying all the inputs accordingly.</li>
+               <li><b>Entity Interpolation</b></li>
+              </ul>
+            </p>
+
+            <h5 class="mb-3 mt-5" id="my-section">My Features</h5>
+            <p>The rest of features that I implemented by myself are:
+              <ul>
+                <li><b>Player Structure</b></li>
+                <li><b>Player Movement</b></li>
+                <li><b>Spawn Weapon and Link on Client</b></li>
+                <li><b>Die/Respawn</b></li>
+                <li><b>Class Selection</b></li>
+                <li><b>Animation Serialization</b></li>
+                <li><b>Client Side Prediction for Projectiles (Fake Projectile on Client)</b>: This creates a "Fake" projectile on the client for smoother inputs, this projectile will follow the trajectory it think the server will follow also, creating an ilusion for the client. The fake projectile will get destroyed on contact with another Player but will not do any damage, as it is the Server Simulation of the Real Projectile who will deal with the damage event.</li>
+                <li><b>Hunter Spell</b></li>
+                <li><b>Handle Destruction of Child Network Objects of Client</b></li>
+                <li><b>Level System</b></li>
+                <li><b>Helped with Mouse Input Serialization</b></li>
+                <li><b>Death Animation / Sound</b></li>
+                <li><b>Class Helmets Art</b></li>
+              </ul>
+            </p>
+            <div class="slider">
+              <div class="slide"><img src="../images/projects/raider/BerserkerShot.gif" height="380" width="690"></div>
+              <div class="slide"><img src="../images/projects/raider/HunterShot.gif" height="380" width="690"></div>
+              <div class="slide"><img src="../images/projects/raider/MageSHot.gif" height="380" width="690"></div>
+              <div class="slide"><img src="../images/projects/raider/BerserkerSpell.gif" height="380" width="690"></div>
+              <div class="slide"><img src="../images/projects/raider/HunterSpell.gif" height="380" width="690"></div>
+              <div class="slide"><img src="../images/projects/raider/MageSpell.gif" height="380" width="690"></div>
+            </div>  
+
+
+
+            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-5">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/nekounknown.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>NekoUnknown's Battlegrounds</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/salty_slime.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>Salty the Slime</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div> <!-- .col-md-8 -->
+
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <br><br>
+            	<h3 class="heading-sidebar">Links</h3>
+              <ul class="categories">
+                <li><a href="https://github.com/ProboxAM/Raider_IO/releases/latest" target="_blank">Download<span></span></a></li>
+                <li><a href="https://github.com/ProboxAM/Raider_IO" target="_blank">Github<span></span></a></li>
+              </ul>
+              <br>
+              <h3 class="heading-sidebar">Contribution</h3>
+              <ul class="categories">
+                <li><a href="#common-section">Common Features<span></span></a></li>
+                <li><a href="#my-section">My Features<span></span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      <div class="row">
+			  <div class="col-md-12 text-center">
+          <ul class="ftco-footer-social list-unstyled float-md float-lft mt-5">
+            <li class="ftco-animate"><a href="https://linkedin.com/in/axel-alavedra-cabello-113666121/"target="_blank"><span class="icon-linkedin"></span></a></li>
+            <li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="https://github.com/AxelAlavedra"target="_blank"><span class="icon-github"></span></a></li>
+          </ul>
+		    </div>
+      </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,32 +1,16 @@
-<!--<?php
-
-	if(isset($_POST['email']) && $_POST['email'] != '')
-	{
-		if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
-		{
-			$userName = $_POST['name'];
-			$userEmail = $_POST['email'];
-			$messageSubject = $_POST['subject'];
-			$message = $_POST['message'];
-			
-			$to = "axel.alavedra@gmail.com";
-			$body = "";
-			$body .= "From: ".$userName."\r\n";
-			$body .= "Email: ".$userEmail."\r\n";
-			$body .= "Message: ".$message."\r\n";
-		
-			mail($to, &messageSubject, $body);
-		}
-	}
-?>-->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Axel Alavedra - Game Developer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta property="og:image" content="https://axelalavedra.com/images/main/background.jpg"/>
+	<meta property="og:site_name" content="Axel Alavedra"/>
+	<meta property="og:title" content="Axel Alavedra - Website"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="This is my own website, containing information about myself and the projects I have done."/>
+	<meta property="og:url" content="https://axelalavedra.com/"/>	
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -365,6 +349,7 @@
 				<button class="btn btn-primary filter-button" data-filter="all">All</button>
 				<button class="btn btn-default filter-button" data-filter="language_c">C++</button>
 				<button class="btn btn-default filter-button" data-filter="unity">Unity/C#</button>
+				<button class="btn btn-default filter-button" data-filter="online">Online</button>
 				<button class="btn btn-default filter-button" data-filter="intern">Internship</button>
 			</div>
 			<br>
@@ -443,6 +428,30 @@
 					</div>
 				</div>
 
+				<div class="col-md-7 unity online">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/main/neko.png);">
+						<a href="projects/nekounknown.html">
+						<div class="overlay"></div>
+						<div class="text text-center p-6">
+							<h3>NekoUnknown's Battlegrounds</h3>
+							<span>Unity Online</span>
+						</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-5 language_c online">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/main/raider.png);">
+						<a href="projects/raiderio.html">
+						<div class="overlay"></div>
+						<div class="text text-center p-6">
+							<h3>Raider IO</h3>
+							<span>C++ Online</span>
+						</div>
+						</a>
+					</div>
+				</div>
+
 				<div class="col-md-6 language_c">
 					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/main/slime.png);">
 						<a href="projects/salty_slime.html">
@@ -466,7 +475,6 @@
 						</a>
 					</div>
 				</div>
-
 
 				
 			</div>
