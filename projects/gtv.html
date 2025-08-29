@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Axel Alavedra - Game Developer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="../index.html">Axel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="../index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="../index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>  
+
+    <section class="hero-wrap js-fullheight" style="background-image: url('../images/main/gtv.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread"></h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">GodsTV</h2>
+            <p><ul>
+              <li>Studio: <a href="https://melbot.es">Melbot Studios</a></li>
+              <li>Platform: PC & Consoles</li>
+              <li>Publisher: <a href="https://melbot.es">Melbot Studios</a></li>
+              <li>Genre: Roguelike</li>
+              <li>Release: TBA</li>
+            </ul>
+            <div class="videoWrapper">
+              <iframe width="560" height="709" src="https://www.youtube.com/embed/0FEkK5jtUrU" title="GodsTV - Live On Kickstarter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <h2 class="mb-3 mt-5">My contribution</h2>
+            <h5 class="mb-3 mt-5" id="bs">Behavior Selection Tool & Runtime</h5>
+            <p> From pre-production I focused on the need for modularity and reusability for the amount of different enemies that we wanted for this project, as well as trying to boost our Designer's productivty and prototyping.
+            <p>After dealing with issues concerning modularity and behavior complexity with Behavior Trees, I've started doing some research for other approaches to Decision Making and came around a <a href="https://youtu.be/5ZXfDFb4dzc">Behavior Selection System by Bobby Anguelov</a>.
+            <p>I quickly prototyped the system to put it into practice and on hands of our Designers and they loved it, so we decided to move forwards with it creating a Tool for production and giving support for it during production.
+            </p>
+            <p class ="text-center"><video width="560" height="315" autoplay muted loop>
+              <source src="../images/projects/gtv/intro.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video></p>
+            
+            <h5 class="mb-3 mt-5" id="ai">Enemy Archetypes and Behaviors</h5>
+            <p> With the new Behavior Selection System, I worked together with Design team to implement all the Behaviors they required for their needs of each enemy.
+            <p> Thanks to the modularity of the System it was really easy to implement generic behaviors that could be used by any enemy in the game by simply adjusting their configurations to the specific needs.</p>
+            <p> The behaviors ranged from simple navigation behaviors, investigation, requesting an attack, using Gameplay Abilites and even performing synchronized Abilities with other Enemies around.
+            <p class ="text-center"><video width="560" height="315" autoplay muted loop>
+              <source src="../images/projects/gtv/gtv.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video></p>
+
+            <h5 class="mb-3 mt-5" id="combat">Combat AI Systems</h5>
+            <p> Working together with our Lead Combat Designer, I implemented the required systems for managing the combat pacing of the enemies. This was done through a classic Ticket System and a Combat Slots System.
+            <p> The Ticket System simply manages the requests for attack of enemies towards a specific target, ensuring a set amount of attacks at each moment to easily handle combat difficulty. Enemies need to request a ticket to perform an attack, if no tickets are available they must idle, move around or taunt while waiting for their request to be successful.</p>
+            <p> The Combat Slot System handled the combat engagement of Enemies towards a specific Target. Each Target had a set amount of slots for Melee and Ranged enemies, and each enemy had a slot size. For an enemy to engage a valid target in combat they would have to make an engagement request and if the target had slots for it, it would be allowed to engage, otherwise the Enemy would try to find a lower priority target that had space for it.</p>
+            <p class="text-center"><img src="../images/projects/gtv/screenshoot_5.png" width="560" alt="" class="img-fluid"></p>
+
+            <h5 class="mb-3 mt-5" id="gameplay">Gameplay</h5>
+            <p>
+              Most of Gameplay-related work has been done through the Gameplay Ability System of Unreal Engine 5.
+              I implemented all the enemy attacks as Gameplay Abilities, following a structure based on the type of attack, be it Ranged, Melee, Leap, etc; 
+              This allowed us to create new versions of attacks for each specific enemy while keeping a general implementation.
+            </p>
+            <p>
+              I've also worked on the Mutation and Famous Enemy systems, which add new Abilities and/or Behaviors during runtime to Enemies. 
+              Thanks to the Behavior Selection System, it was super easy to inject new Behaviors and disable others on an AI Archetype during runtime to allow it to behave differently due to it's new status.
+            </p>
+            
+<!--            <section class="ftco-section contact-section ftco-no-pb">
+              <div class="container">
+                <div class="row d-flex mb-1">
+                  <div class="col-md-5 col-lg-7 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/timeless.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-left"></span>
+                      </div>
+                      <p>Timeless Warriors</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-7 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                      <a href="../projects/ai.html">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-arrow-right"></span>
+                      </div>
+                      <p>AI Systems</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>-->
+            
+          </div> <!-- .col-md-8 -->
+
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <br><br>
+            	<h3 class="heading-sidebar">Links</h3>
+              <ul class="categories">
+                <li><a href="https://melbot.es" target="_blank">Website<span></span></a></li>
+              </ul>
+              <br>
+              <h3 class="heading-sidebar">Contribution</h3>
+              <ul class="categories">
+                <li><a href="#bs">Behavior Selection Tool & Runtime<span></span></a></li>
+                <li><a href="#ai">Enemy Archetypes and Behaviors<span></span></a></li>
+                <li><a href="#combat">Combat AI Systems<span></span></a></li>
+                <li><a href="#gameplay">Gameplay<span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- .section -->
+    
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+			<div class="col-md-12 text-center">
+				<ul class="ftco-footer-social list-unstyled float-md float-lft mt-5">
+					<li class="ftco-animate"><a href="https://linkedin.com/in/axel-alavedra-cabello-113666121/"target="_blank"><span class="icon-linkedin"></span></a></li>
+					<li class="ftco-animate"><a href="https://twitter.com/Axl_32" target="_blank"><span class="icon-twitter"></span></a></li>
+					<li class="ftco-animate"><a href="https://github.com/AxelAlavedra"target="_blank"><span class="icon-github"></span></a></li>
+				</ul>
+		  	</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>
